@@ -119,26 +119,9 @@ function eventHandler() {
 
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/main.jpg);"></div>')
+	// $(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/main.jpg);"></div>')
 	// /добавляет подложку для pixel perfect
-
-
-
-	// const url = document.location.href;
-	// $.each($(".top-nav__nav a "), function() {
-
-	// 	if (this.href == url) {
-	// 		if ($(this).hasClass("top-nav__link") == true) {
-
-	// 			$(this).addClass('top-nav__link-active');
-	// 		}
-	// 		if ($(this).hasClass("footer__link") == true) {
-
-	// 			$(this).addClass('footer__link-active');
-	// 		} 
-	// 	}; 
-	// }); 
-
+ 
 	// /закрыть/открыть мобильное меню
 
 	function heightses() {
@@ -150,7 +133,7 @@ function eventHandler() {
 		// 
 		// скрывает моб меню
 
-		const topH = $("header ").innerHeight();
+		const topH = $("header ").height();
 
 		$(window).scroll(function () {
 			if ($(window).scrollTop() > topH) {
@@ -171,17 +154,7 @@ function eventHandler() {
 	});
 
 	heightses();
-
-	// листалка по стр
-	$(" .top-nav li a, .scroll-link").click(function () {
-		const elementClick = $(this).attr("href");
-		const destination = $(elementClick).offset().top;
-
-		$('html, body').animate({ scrollTop: destination }, 1100);
-
-		return false;
-	});
-
+ 
 	let defaultSl = {
 		// watchOverflow: true,
 	

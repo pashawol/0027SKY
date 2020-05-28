@@ -111,19 +111,8 @@ function eventHandler() {
 	JSCCommon.mobileMenu();
 	JSCCommon.inputMask(); // JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-
-	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/main.jpg);"></div>'); // /добавляет подложку для pixel perfect
-	// const url = document.location.href;
-	// $.each($(".top-nav__nav a "), function() {
-	// 	if (this.href == url) {
-	// 		if ($(this).hasClass("top-nav__link") == true) {
-	// 			$(this).addClass('top-nav__link-active');
-	// 		}
-	// 		if ($(this).hasClass("footer__link") == true) {
-	// 			$(this).addClass('footer__link-active');
-	// 		} 
-	// 	}; 
-	// }); 
+	// $(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/main.jpg);"></div>')
+	// /добавляет подложку для pixel perfect
 	// /закрыть/открыть мобильное меню
 
 	function heightses() {
@@ -132,7 +121,7 @@ function eventHandler() {
 		// 
 		// скрывает моб меню
 
-		var topH = $("header ").innerHeight();
+		var topH = $("header ").height();
 		$(window).scroll(function () {
 			if ($(window).scrollTop() > topH) {
 				$('.top-nav  ').addClass('fixed');
@@ -149,16 +138,7 @@ function eventHandler() {
 	$(window).resize(function () {
 		heightses();
 	});
-	heightses(); // листалка по стр
-
-	$(" .top-nav li a, .scroll-link").click(function () {
-		var elementClick = $(this).attr("href");
-		var destination = $(elementClick).offset().top;
-		$('html, body').animate({
-			scrollTop: destination
-		}, 1100);
-		return false;
-	});
+	heightses();
 	var defaultSl = {// watchOverflow: true,
 	};
 	var swiperH = new Swiper('.headerBlock__slider--js', {
