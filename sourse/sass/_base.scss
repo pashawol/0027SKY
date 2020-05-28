@@ -19,7 +19,20 @@ html {
 
 }
 .headerBlock{
-	height: 980px;
+	// height: 980px;
+}
+
+a:hover {
+	color: $primary;
+	// text-decoration: underline;
+}
+
+.container{
+		@include media-breakpoint-down(xs){
+
+			padding-left: 20px;
+			padding-right: 20px;
+		}
 }
 
 body,
@@ -105,6 +118,7 @@ body {
 
 .tdu {
 	// text-decoration: underline;
+	color: $primary !important;
 	text-decoration: none !important;
 	border-bottom: 1px solid ;
 
@@ -243,27 +257,30 @@ ul {
 }
 
 
-// select.form-control {
-// 	background-image: url(../img/svg/chevron-up.svg);
-// 	background-repeat: no-repeat;
-// 	background-position: calc(100%  - 20px) 50%; // background-size: rem(18) ;
-// 	padding-right: rem(43px);
-// 	appearance: none !important;
+select.form-control {
+	background-image: url(../img/svg/chevron-down.svg);
+	// background-image: url(../img/svg/chevron-up.svg);
+	background-repeat: no-repeat;
+	background-position: calc(100%  - 10px) 50%; // background-size: rem(18) ;
+	// padding-right: rem(43px);
+	appearance: none !important;
 
-// 	&:not([size]):not([multiple]) {
-// 		height: $input-height;
-// 	}
+	&:not([size]):not([multiple]) {
+		// height: $input-height;
+	}
 
-// 	&:focus::-ms-value {
+	&:focus::-ms-value {
 
-// 	}
-// }
+	}
+}
 
 
 input[type='number'] {
 	-moz-appearance: textfield;
 }
-
+select{
+	-webkit-appearance: none;
+}
 select::-ms-expand {
 	display: none;
 }

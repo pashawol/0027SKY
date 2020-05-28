@@ -18,6 +18,17 @@
 			text-transform: uppercase;
 			font-weight: 500;
 			margin-bottom: 0;
+			.icon {
+				color: $primary;
+				margin-right: rem(10);
+			
+
+				@include media-breakpoint-up(sm) {
+					font-size: rem(45);
+				}
+
+				font-size: rem(32);
+			}
 			text-decoration: none !important;
 				@include media-breakpoint-up(md){
 					justify-content: start;

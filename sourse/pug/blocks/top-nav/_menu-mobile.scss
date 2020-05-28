@@ -2,17 +2,17 @@
 
 // мобильное меню
 $h: em(2);
+.page-main .top-nav:not(.fixed) .toggle-menu-mobile{
+	color: #ffffff;
 
+}
 .toggle-menu-mobile {
 	display: block;
 	height: $h* 12;
 	position: relative;
-	color: #ffffff;
 	font-size: 20px;
 
-	&.on {
-		color: #ffffff;
-	}
+ 
 
 	span:after,
 	span:before {
@@ -76,26 +76,42 @@ $h: em(2);
 		transform: rotate(-45deg);
 	}
 }
-
+.page-main .top-nav:not(.fixed) .menu-mobile__inner {
+ background-color: #192d46;
+ color: #ffffff;
+ 	.canvas-wrap {
+ 		display: block;
+ 		opacity: 1;
+ 	}
+}
 .menu-mobile {
+	.canvas-wrap{
+		display: none;
+		opacity: 0;
+	}
 	position: fixed !important;
-	z-index: 999;
-	max-width: 85%;
-	height: 101vh;
-	width: 280px;
+	z-index: 800; 
+	height: 101vh; 
 	top: 0;
 	// left: 0;
 	right: 0;
-	transform: translate(120%, 0);
+	transform: translate(0, -120%);
 	@include mt(.6);
 	will-change: transform;
-
+	width: 100%;
+	text-align: center;
 	&__inner {
-		background-color: #c3c3c3;
-		padding: 5% 0;
+		// background-color: #c3c3c3;
+		// padding: 5% 0;
+		background-color: #ffffff;
 		overflow-y: auto;
 		-webkit-overflow-scrolling: touch;
 		height: 100%;
+		padding: rem(100) 20px;
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		z-index: -1;
 	}
 
 	&.active {
@@ -136,19 +152,41 @@ $h: em(2);
 
 	ul {
 		position: relative;
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 	}
 
 	li {
 		display: block;
-		margin: 0;
-		border-top: 1px solid rgba(255, 255, 255, .13);
-
+		margin: 0; 
+		margin-bottom: rem(10);
 		a {
 			// font-size: 16px;
 
 			padding: 10px;
-			display: block;
+			// display: block;
+			border-bottom: 1px solid transparent;
+			text-decoration: none !important;
+			&:hover,
+			&.active{
+				color: $primary;
+				border-color:$primary;
+			}
 
+		}
+	}
+	&__footer-item{
+		margin-left: auto;
+		margin-right: auto;
+		max-width: rem(200);
+		display: flex;
+		align-items: center;
+		margin-bottom: 10px;
+		img{
+			flex: 0 0 auto;
+			margin-right: rem(10);
 		}
 	}
 }

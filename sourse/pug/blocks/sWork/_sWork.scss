@@ -39,6 +39,12 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			text-decoration: none !important;
+			color: $body-color !important;
+			border: 2px solid white;
+			&:hover{
+				border-color: $primary;
+			}
 			img{
 				flex: 0 0 auto;
 				margin-right: rem(14);

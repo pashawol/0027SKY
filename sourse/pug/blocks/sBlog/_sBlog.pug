@@ -2,18 +2,17 @@ mixin sBlog()
 	// start sBlog
 	+b.SECTION.sBlog.section#sBlog&attributes(attributes)
 		.container
-			+b.section-title
+			+b.section-title.text-md-left.text-center
 				h2 Читайте наш блог
 				
 			.row
 				mixin item(i,t)
-					+e.item
-						+e.img-wrap.bg-wrap(href="#")
+					+e.item(href="#")
+						+e.DIV.img-wrap.bg-wrap
 							+pic(i,'bg','')(class="picture-bg")
-						+e.caption
-							+e.label Биткоин
-							+e.title
-								a(href="#")= t
+						+e.DIV.caption
+							+e.DIV.label Биткоин
+							+e.DIV.title= t
 							.row.small.text-secondary
 								.col-auto 20 мая 2020
 								.col-auto

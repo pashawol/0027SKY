@@ -26,7 +26,7 @@ $blue: #0098db !default;
 $indigo: #6610f2 !default;
 $purple: #6f42c1 !default;
 $pink: #e83e8c !default;
-$red: #dc3545 !default;
+$red: #EF3124 !default;
 $orange: #fd7e14 !default;
 $yellow: #ff9500 !default;
 $green: #00d151 !default;
@@ -43,7 +43,7 @@ $secondary: #828890 !default;
 $success: $green !default;
 $info: $cyan !default;
 $warning: $yellow !default;
-$danger: green !default;
+$danger: $red !default;
 $light: #f3f6fa !default;
 $dark: #000000 !default;
 
@@ -317,7 +317,7 @@ $input-font-size-lg: $input-btn-font-size-lg !default;
 $input-bg: #F3F6FA !default;
 $input-disabled-bg: $gray-200 !default;
 
-$input-color: $gray-700 !default;
+$input-color: $body-color !default;
 $input-border-color: #F3F6FA !default;
 // $input-border-width:                    $input-btn-border-width !default;
 $input-box-shadow: inset 0 1px 1px rgba($black, .075) !default;

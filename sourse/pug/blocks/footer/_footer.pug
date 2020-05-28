@@ -4,7 +4,8 @@ mixin footer()
 			.row
 				+e.col.col-md-auto
 					+e.logo(href="/")
-							img(src="img/svg/logo.svg", alt="")
+							+icon('logo')
+							//- img(src="img/svg/logo.svg", alt="")
 							+e.logo-title SKY CRYPTO
 				.col
 					+soc()

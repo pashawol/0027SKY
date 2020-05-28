@@ -1,46 +1,81 @@
 
 mixin modal() 
- 
-	//- #modal-win.modal.fade(tabindex='-1', role='dialog', aria-labelledby='modal-win', aria-hidden='true')
-		
-	//- 	div( class="   modal-dialog  modal-dialog-centered  " role='document') 
-	//- 		+form-wrap()(class=" modal-content modal-win ")
-	//- 			button.close.mfp-close(type='button', data-dismiss='modal', aria-label='Close')  ×
-	//- 			+input("tel","Введите ваш телефон")(name="tel" required) 
-				
-	//- 			+e.BUTTON.btn.btn.btn-accent.btn-block Отправить
-	//- 			+b.wrap-polite
-	//- 				+b.custom-input.polite
-	//- 					+b.LABEL.custom-input.polite
-	//- 						+e.INPUT.input.__input-radio(type="checkbox" checked name="polite" required value="")
-	//- 						+e.SPAN.lab
-	//- 						| Даю 
-	//- 						| 
-	//- 						span.link( data-toggle='modal', data-target='#exampleModal2') согласие 
 
-	//- 						| на хранение и обработку   персональных данных
+
+	 
+	div(id="modal-signUp" class="  modal-win modal-form" style="display: none" )
+		.modal-win__inner
+			+form-wrap()
+					+b.logo-main
+						+icon('logo') 
+						+e.logo-title SKY CRYPTO
+					.text-center
+						+e.title-top Создать аккаунт
+						+e.text Введите Ваш e-mail для завершения регистрации
+					+input("Введите ваш e-mail",'email','E-mail:') 
+					+polite()
+						| Подтверждая регистрацию, Вы&nbsp;соглашаетесь с&nbsp;#[a(href="#") условиями сервиса]
+					button.btn.btn-warning.btn-block(type="submit" )  Продолжить
+					.text-center Уже есть аккаунт? #[a.link-modal.modal-close-js(href="#modal-signIn").tdu Войти]
+	// #modal-signUp
 	
- 
+	div(id="modal-signIn" class="  modal-win modal-form" style="display: none" )
+		.modal-win__inner
+			+form-wrap()
+					+b.logo-main
+						+icon('logo') 
+						+e.logo-title SKY CRYPTO
+					.text-center
+						+e.title-top Авторизация
+						p.text-danger Текст ошибки к самой форме.
+					+input("Введите ваш e-mail",'email','E-mail:') 
+					+input("Введите пароль",'password','Пароль:')(class="border-danger")
+					p.text-danger.pb-1 Текст ошибки к самой форме.
+					+polite()
+						| Подтверждая регистрацию, Вы&nbsp;соглашаетесь с&nbsp;#[a(href="#") условиями сервиса]
+					button.btn.btn-warning.btn-block(type="submit" )  Продолжить
+					.text-center Уже есть аккаунт? #[a.link-modal.modal-close-js(href="#modal-signUp").tdu Войти]
+	// #modal-signIn
+	div(id="modal-reg" class="  modal-win modal-form" style="display: none" )
+		.modal-win__inner
+			+form-wrap()
+					+b.logo-main
+						+icon('logo') 
+						+e.logo-title SKY CRYPTO
+					.text-center
+						+e.title-top Регистрация аккаунта
+						+e.text  Для завершения регистрации, пожалуйста, введите код, который мы&nbsp;отправили на&nbsp;Ваш e-mail
+					+input("Введите ваш e-mail",'email','E-mail:') 
+					+input("Введите код подтверждения",'text','Код подтверждения:')(class="border-danger")
+					p.text-danger.pb-1 Текст ошибки к самой форме.
+				 
+					button.btn.btn-warning.btn-block(type="submit" )  Продолжить 
+	// #modal-reg
+	a.link-modal.modal-close-js(href="#modal-reg").tdu Регистрация аккаунта
+	
+	div(id="modal-pass" class="  modal-win modal-form" style="display: none" )
+		.modal-win__inner
+			+form-wrap()
+					+b.logo-main
+						+icon('logo') 
+						+e.logo-title SKY CRYPTO
+					.text-center
+						+e.title-top Установка пароля
+						+e.text Вы&nbsp;можете использовать автоматически предложенный пароль или установить собственный
+					+input("Введите пароль",'password','Пароль:')
+					p.text-primary.pb-1 Только сложные пароли, содержащие как минимум 1&nbsp;заглавную букву и&nbsp;1&nbsp;цифру.
+					
+					+input("Повторите пароль",'password',' ')
+					p.text-primary.pb-1 Только сложные пароли, содержащие как минимум 1&nbsp;заглавную букву и&nbsp;1&nbsp;цифру.
+					+input("Введите секретное слово",'text','Секретное слово:')
+					p.text-primary.pb-1 Обязательно запомните секретное слово, оно необходимо для восстановления доступа к&nbsp;Вашему аккаунту.
+					+input(" ",'text','Имя аккаунта:')
+					p.text-primary.pb-1 Имя аккаунта присваивается автоматически и&nbsp;его нельзя изменить.
 
-	//- #thanks.modal.fade(tabindex='-1', role='dialog', aria-labelledby='thanks', aria-hidden='true')
-	//- 	div( class=" ttext-center  modal-dialog  modal-dialog-centered  " role='document') 
-	//- 		+form-wrap()(class=" modal-content modal-win ")
-	//- 			button.close.mfp-close(type='button', data-dismiss='modal', aria-label='Close')  ×
-	//- 			br
-	//- 			.h2 Заявка принята
-	//- 			br
-	//- 			.h3 Скоро с Вами свяжутся
-	//- 			br 
-	.d-none
-		+form-wrap()(id="modal-call" class="  modal-win modal-form" )
-			.text-center
-				+e.title.h3.ttu Обратный звонок
-				p Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут
-			+input("Ваше Имя")(required) 
-			+input("Ваш телефон","tel")(required)
-			//- +input("email","Ваше email")(required)
-			//- +text( "Комментарий")
-			+e.INPUT.btn(type="submit" value="Рассчитать") 
-			+polite()
-		// #modal-call
+				 
+					button.btn.btn-warning.btn-block(type="submit" )  Продолжить 
+	// #modal-pass
+	br
+	a.link-modal.modal-close-js(href="#modal-pass").tdu Установка пароля
+
 	// modal

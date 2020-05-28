@@ -1,75 +1,81 @@
 mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
-		.container
-			h1 Купить биткоин без&nbsp;регистрации
-			+e.inner
-				.row
-					+e.group.col-lg-3.align-self-center.d-none.d-md-block
-						+e.title Начать обмен
-					+e.group.col-md.d-md-block.d-flex.justify-content-center
-						+e.group-title Курс обмена:
-						+e.group-text  722 259.49 RUB = 1 BTC
-					+e.group.col-md.d-md-block.d-flex.justify-content-center
-						+e.group-title Минимальная покупка:
-						+e.group-text  900 RUB
-					+e.group.col-md.d-md-block.d-flex.justify-content-center
-						+e.group-title Максимальная покупка:
-						+e.group-text  20 000 RUB
-
-				 
-				+form-wrap
-					.headerBlock__title.d-md-none.text-center Начать обмен
+		#particles-js.canvas-wrap
+		+e.center
+			.container
+				h1 Купить биткоин без&nbsp;регистрации
+				+e.inner
 					.row
-						mixin col(t)
-							.headerBlock__group.col-12&attributes(attributes)
-								.headerBlock__group-title= t
-									span.text-body= r
-									|:
-								block 
-						.col-md-6
-							.row
-								+col('Вы отдаете','')(class="col-lg-6")
-									+b.custom-select-wrap
-										select.custom-select-js
-											+option("Сбербанк ",'img/svg/sber.svg ') 
-											+option("Тинькофф ",'img/svg/tinkoff.svg ') 
-											+option("Яндекс.Деньги",'img/svg/yad.svg ') 
-											+option("QIWI ",'img/svg/qiwi.svg ') 
-											+option("С карты на карту",'img/svg/card.svg ') 
-											+option("Любой банк РФ",'img/svg/bank.svg ') 
-											+option("Баланс телефона",'img/svg/tel.svg ') 
-											+option("Альфа-банк",'img/svg/alfa.svg ') 
-											+option("ВТБ 24",'img/svg/vtb.svg ') 
-											+option("Mastercard",'img/svg/mastercard.svg ') 
-											+option("VISA",'img/svg/visa.svg ') 
-											+option("МТС-банк",'img/svg/mts.svg ') 
-											+option("Рокетбанк",'img/svg/roketbank.svg') 
-								+col('Сумма','*')(class="col-lg-6")
-									+input('150 000') 
-						.col-md-6
-							.row
-								+col('Вы получаете','')(class="col-lg-6 ")
-									+b.custom-select-wrap
-										select.custom-select-js
-											+option("Биткоин (BTC)",'img/svg/bitcoin.svg')
-											+option("Эфириум (ETH)",'img/svg/eth.svg')
-								+col('Сумма','*')(class="col-lg-6  ")
-									+input('150 000')
-						+col('E-mail')(class='col-md-6')
-							+input('Введите ваш e-mail','email')
-						+col('Кошелек для получения')(class='col-md-6')
-							+input('Введите кошелек')
-						+e.text-center.col-12.text-center.text-secondary #[span.text-body *] &mdash; сумма в&nbsp;рублях может отличаться из-за динамической комиссии сети blockchain
-						.col-sm-6.align-self-center
-							+polite
-						.col-sm-6
-							button.btn.btn-block.btn-warning(type="submit") Начать обмен
-								img(src="img/svg/arrow-btn.svg", alt="")
+						+e.group.col-lg-3.align-self-center.d-none.d-md-block
+							+e.title Начать обмен
+						+e.group.col-md.d-md-block.d-flex.justify-content-center
+							+e.group-title Курс обмена:
+							+e.group-text  722 259.49 RUB = 1 BTC
+						+e.group.col-md.d-md-block.d-flex.justify-content-center
+							+e.group-title Минимальная покупка:
+							+e.group-text  900 RUB
+						+e.group.col-md.d-md-block.d-flex.justify-content-center
+							+e.group-title Максимальная покупка:
+							+e.group-text  20 000 RUB
+
+					
+					+form-wrap
+						.headerBlock__title.d-md-none.text-center Начать обмен
+						.row
+							mixin col(t,r)
+								.headerBlock__group.col-12&attributes(attributes)
+									.headerBlock__group-title= t
+										span.text-body= r
+										|:
+									block 
+							.col-md-6
+								.row
+									+col('Вы отдаете','')(class="col-lg-6")
+										+b.custom-select-wrap
+											select.custom-select-js.form-control
+												+option("Сбербанк ",'img/svg/sber.svg ') 
+												+option("Тинькофф ",'img/svg/tinkoff.svg ') 
+												+option("Яндекс.Деньги",'img/svg/yad.svg ') 
+												+option("QIWI ",'img/svg/qiwi.svg ') 
+												+option("С карты на карту",'img/svg/card.svg ') 
+												+option("Любой банк РФ",'img/svg/bank.svg ') 
+												+option("Баланс телефона",'img/svg/tel.svg ') 
+												+option("Альфа-банк",'img/svg/alfa.svg ') 
+												+option("ВТБ 24",'img/svg/vtb.svg ') 
+												+option("Mastercard",'img/svg/mastercard.svg ') 
+												+option("VISA",'img/svg/visa.svg ') 
+												+option("МТС-банк",'img/svg/mts.svg ') 
+												+option("Рокетбанк",'img/svg/roketbank.svg') 
+									+col('Сумма','*')(class="col-lg-6")
+										+input('0')(class="input-pref") 
+											+e.preff RUB
+							.col-md-6
+								.row
+									+col('Вы получаете','')(class="col-lg-6 ")
+										+b.custom-select-wrap
+											select.custom-select-js.form-control
+												+option("Биткоин (BTC)",'img/svg/bitcoin.svg')
+												+option("Эфириум (ETH)",'img/svg/eth.svg')
+									+col('Сумма','*')(class="col-lg-6  ")
+										+input('0')(class="input-pref")
+											+e.preff BTC
+							+col('E-mail')(class='col-md-6')
+								+input('Введите ваш e-mail','email')
+
+							+col('Кошелек для получения')(class='col-md-6')
+								+input('Введите кошелек')(class="input-pref")
+									+e.preff BTC
+							+e.text-center.col-12.text-center.text-secondary #[span.text-body *] &mdash; сумма в&nbsp;рублях может отличаться из-за динамической комиссии сети blockchain
+							.col-sm-6.align-self-center
+								+polite
+							.col-sm-6
+								button.btn.btn-block.btn-warning(type="submit") Начать обмен
+									img(src="img/svg/arrow-btn.svg", alt="")
 		+e.container.container
 			+e.slider--js.swiper-container
 				.swiper-wrapper
 					- for (var x = 1; x <= 9; x++)
 						+e.slide.swiper-slide
-							img(src=`img/@2x/logo-${x}.png` alt='')
+							img.swiper-lazy(src="#" data-src=`img/@2x/logo-${x}.png` alt='')
 	// end headerBlock

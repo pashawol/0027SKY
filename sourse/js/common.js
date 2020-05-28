@@ -12,6 +12,10 @@ const JSCCommon = {
 			infobar: false,
 			touch: false,
 			type: 'inline',
+			backFocus: false,
+			beforeLoad: function () {
+			
+			},
 			i18n: {
 				en: {
 					CLOSE: "Закрыть",
@@ -27,7 +31,9 @@ const JSCCommon = {
 				},
 			},
 		});
-		$(".modal-close-js").click(function () {
+		$(".fancybox-close-small, .modal-close-js").click(function () {
+			$(".fancybox-container ").removeClass('fancybox-is-open');
+			instance.close();
 			$.fancybox.close();
 		})
 		$.fancybox.defaults.backFocus = false;
@@ -72,13 +78,7 @@ const JSCCommon = {
 
 			});
 		})
-		document.addEventListener('mouseup', function (event) {
-			let container = event.target.closest(".menu-mobile--js.active"); // (1)
-			if (!container) {
-				_this.closeMenu();
-
-			}
-		});
+ 
 	},
 	// /mobileMenu
 
@@ -156,18 +156,18 @@ function eventHandler() {
 	heightses();
  
 	let defaultSl = {
-		// watchOverflow: true,
-	
+		
 	}
 	const swiperH = new Swiper('.headerBlock__slider--js', {
 		// slidesPerView: 5,
-	 
+		
 		slidesPerView: 'auto',
 		spaceBetween: 20,
 		freeMode: true, 
+		watchOverflow: true,
 		lazy: {
 			loadPrevNext: true,
-			loadPrevNextAmount: 3,
+			loadPrevNextAmount: 12,
 		},
 
 	});
@@ -175,8 +175,15 @@ function eventHandler() {
  
 
 	$(".custom-select-js").chosen({
-		html_template: '<span class="option-row"><span class="option-img-wrap"><img  class="{class_name}" src="{url}" /></span><span class="option-text">{text}</span></span> '
+		html_template: '<span class="option-row"><span class="option-img-wrap"><img  class="{class_name}" src="{url}" /></span><span class="option-text">{text}</span></span> ',
+		display_selected_options: false
 	});
+	if (document.querySelector('.canvas-wrap')) {
+		
+		particlesJS.load('particles-js', 'js/particles.json' );
+		particlesJS.load('particles2-js', 'js/particles.json' );
+		particlesJS.load('particles3-js', 'js/particles.json' );
+	}
 
 		var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 		if (isIE11) {

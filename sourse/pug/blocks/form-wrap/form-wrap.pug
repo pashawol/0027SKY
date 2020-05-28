@@ -69,4 +69,7 @@ mixin add-file(n)
 mixin polite()
 	+e.policy
 		+in-c()(checked)
-			+e.text Я согласен с #[a(href="#") условиями и правилами сервиса]
+			if block
+				block
+			else
+				+e.text Я согласен с #[a(href="#") условиями и правилами сервиса]
