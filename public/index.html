@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>title</title>
+		<title>Главная</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, shrink-to-fit=no">
@@ -21,73 +21,583 @@
 		<meta name="theme-color" content="#3361d8">
 		<link rel="stylesheet" href="libs/swiper/css/swiper.min.css"/>
 		<link rel="stylesheet" href="libs/@fancyapps/fancybox/jquery.fancybox.min.css"/>
+		<link rel="stylesheet" href="libs/chosen-js/chosen.min.css"/>
+		<link rel="stylesheet" href="js/Image-Select/ImageSelect.css"/>
 		<link rel="stylesheet" href="css/main.min.css"/>
 	</head>
-	<body><!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
+	<body class="page-main"><!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
 		<div class="main-wrapper">
-			<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
-			</div>
-			<div class="menu-mobile menu-mobile--js d-lg-none">
+			<div class="menu-mobile menu-mobile--js d-xl-none">
 				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
 				</div>
 				<div class="menu-mobile__inner">
 					<ul class="menu-mobile__nav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="/" itemprop="url">Главная</a>
+						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Для телефона</a>
 						</li>
-						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Услуги  </a>
+						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Для бизнеса</a>
 						</li>
-						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Подбор септика   </a>
+						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Обучение</a>
 						</li>
-						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Акции </a>
+						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">FAQ</a>
 						</li>
-						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url"> О компании  </a>
+						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Контакты</a>
 						</li>
-						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url"> Доставка и оплата </a>
-						</li>
-						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url"> Клиентам  </a>
-						</li>
-						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url"> Наши работы   </a>
-						</li>
-						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Контакты </a>
+						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Зарабатывай</a>
 						</li>
 					</ul>
-					<div class="text-right"></div>
+					<div class="menu-mobile__footer">
+						<div class="menu-mobile__footer-item"><img src="img/svg/bitcoin.svg" alt=""/>722 259.49 RUB 
+						</div>
+						<div class="menu-mobile__footer-item"><img src="img/svg/eth.svg" alt=""/>722 259.49 RUB 
+						</div>
+					</div>
 				</div>
 			</div>
 			<!--  мобильное меню-->
+			<!-- start header-->
+			<header class="header" id="header">
+				<div class="container">
+					<!-- start top-nav-->
+					<div class="top-nav block-with-lazy">
+						<div class="container">
+							<div class="row">
+								<div class="col-xl-auto col"><a class="top-nav__logo" href="/"><img src="img/svg/logo.svg" alt=""/><span class="top-nav__logo-title">SKY CRYPTO</span></a>
+								</div>
+								<div class="col d-none d-xl-block">
+									<ul class="top-nav__nav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+										<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">Для телефона</a>
+										</li>
+										<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">Для бизнеса</a>
+										</li>
+										<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">Обучение</a>
+										</li>
+										<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">FAQ</a>
+										</li>
+										<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">Контакты</a>
+										</li>
+										<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">Зарабатывай</a>
+										</li>
+									</ul>
+								</div>
+								<div class="col-auto">
+									<div class="custom-select-wrap custom-select-wrap--lang">
+										<select class="custom-select-js"> 
+											<option value="En" data-img-src="img/svg/eng.svg">En</option>
+											<option value="Ru" data-img-src="img/svg/Rus.svg">Ru</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-auto d-none d-md-block">
+									<div class="custom-select-wrap custom-select-wrap--currency">
+										<select class="custom-select-js">
+											<option value="722 259.49 RUB" data-img-src="img/svg/bitcoin.svg">722 259.49 RUB</option>
+											<option value="Эфириум (ETH)" data-img-src="img/svg/eth.svg">Эфириум (ETH)</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-auto"><a class="top-nav__btn" href="#">Вход</a>
+								</div>
+								<div class="col-auto d-xl-none">
+									<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- end top-nav-->
+				</div>
+			</header>
+			<!-- end header-->
 			<!-- start headerBlock-->
 			<div class="headerBlock section" id="headerBlock">
 				<div class="container">
-					<div class="section-title text-center">
-						<h2>headerBlock ds dfsdfdsfsd</h2>
+					<h1>Купить биткоин без&nbsp;регистрации</h1>
+					<div class="headerBlock__inner">
+						<div class="row">
+							<div class="headerBlock__group col-lg-3 align-self-center d-none d-md-block">
+								<div class="headerBlock__title">Начать обмен
+								</div>
+							</div>
+							<div class="headerBlock__group col-md d-md-block d-flex justify-content-center">
+								<div class="headerBlock__group-title">Курс обмена:
+								</div>
+								<div class="headerBlock__group-text"> 722 259.49 RUB = 1 BTC
+								</div>
+							</div>
+							<div class="headerBlock__group col-md d-md-block d-flex justify-content-center">
+								<div class="headerBlock__group-title">Минимальная покупка:
+								</div>
+								<div class="headerBlock__group-text"> 900 RUB
+								</div>
+							</div>
+							<div class="headerBlock__group col-md d-md-block d-flex justify-content-center">
+								<div class="headerBlock__group-title">Максимальная покупка:
+								</div>
+								<div class="headerBlock__group-text"> 20 000 RUB
+								</div>
+							</div>
+						</div>
+						<div class="form-wrap">
+							<form>
+								<input type="hidden" name="example-input-field"/>
+								<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+								<input class="utm_source" type="hidden" name="utm_source"/>
+								<input class="utm_term" type="hidden" name="utm_term"/>
+								<input class="utm_medium" type="hidden" name="utm_medium"/>
+								<input class="utm_campaign" type="hidden" name="utm_campaign"/>
+								<div class="headerBlock__title d-md-none text-center">Начать обмен</div>
+								<div class="row">
+									<div class="col-md-6">
+										<div class="row">
+												<div class="headerBlock__group col-12 col-lg-6">
+													<div class="headerBlock__group-title">Вы отдаете<span class="text-body"></span>:</div>
+													<div class="custom-select-wrap">
+														<select class="custom-select-js">
+															<option value="Сбербанк " data-img-src="img/svg/sber.svg ">Сбербанк </option>
+															<option value="Тинькофф " data-img-src="img/svg/tinkoff.svg ">Тинькофф </option>
+															<option value="Яндекс.Деньги" data-img-src="img/svg/yad.svg ">Яндекс.Деньги</option>
+															<option value="QIWI " data-img-src="img/svg/qiwi.svg ">QIWI </option>
+															<option value="С карты на карту" data-img-src="img/svg/card.svg ">С карты на карту</option>
+															<option value="Любой банк РФ" data-img-src="img/svg/bank.svg ">Любой банк РФ</option>
+															<option value="Баланс телефона" data-img-src="img/svg/tel.svg ">Баланс телефона</option>
+															<option value="Альфа-банк" data-img-src="img/svg/alfa.svg ">Альфа-банк</option>
+															<option value="ВТБ 24" data-img-src="img/svg/vtb.svg ">ВТБ 24</option>
+															<option value="Mastercard" data-img-src="img/svg/mastercard.svg ">Mastercard</option>
+															<option value="VISA" data-img-src="img/svg/visa.svg ">VISA</option>
+															<option value="МТС-банк" data-img-src="img/svg/mts.svg ">МТС-банк</option>
+															<option value="Рокетбанк" data-img-src="img/svg/roketbank.svg">Рокетбанк</option>
+														</select>
+													</div>
+												</div>
+												<div class="headerBlock__group col-12 col-lg-6">
+													<div class="headerBlock__group-title">Сумма<span class="text-body"></span>:</div>
+													<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="150 000" step="" name="text"/> 
+													</div>
+													<!-- +e.input-wrap-->
+												</div>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="row">
+												<div class="headerBlock__group col-12 col-lg-6 ">
+													<div class="headerBlock__group-title">Вы получаете<span class="text-body"></span>:</div>
+													<div class="custom-select-wrap">
+														<select class="custom-select-js">
+															<option value="Биткоин (BTC)" data-img-src="img/svg/bitcoin.svg">Биткоин (BTC)</option>
+															<option value="Эфириум (ETH)" data-img-src="img/svg/eth.svg">Эфириум (ETH)</option>
+														</select>
+													</div>
+												</div>
+												<div class="headerBlock__group col-12 col-lg-6  ">
+													<div class="headerBlock__group-title">Сумма<span class="text-body"></span>:</div>
+													<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="150 000" step="" name="text"/>
+													</div>
+													<!-- +e.input-wrap-->
+												</div>
+										</div>
+									</div>
+										<div class="headerBlock__group col-12 col-md-6">
+											<div class="headerBlock__group-title">E-mail<span class="text-body"></span>:</div>
+											<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="email" placeholder="Введите ваш e-mail" step="" name="email"/>
+											</div>
+											<!-- +e.input-wrap-->
+										</div>
+										<div class="headerBlock__group col-12 col-md-6">
+											<div class="headerBlock__group-title">Кошелек для получения<span class="text-body"></span>:</div>
+											<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Введите кошелек" step="" name="text"/>
+											</div>
+											<!-- +e.input-wrap-->
+										</div>
+									<div class="form-wrap__text-center col-12 text-center text-secondary"><span class="text-body">*</span> &mdash; сумма в&nbsp;рублях может отличаться из-за динамической комиссии сети blockchain
+									</div>
+									<div class="col-sm-6 align-self-center">
+										<div class="form-wrap__policy">
+											<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox" checked="checked"/><span class="custom-input__lab"></span><span class="custom-input__text">Я согласен с <a href="#">условиями и правилами сервиса</a></span>
+											</label>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<button class="btn btn-block btn-warning" type="submit">Начать обмен<img src="img/svg/arrow-btn.svg" alt=""/></button>
+									</div>
+								</div>
+							</form>
+						</div>
 					</div>
-					<div class="row"></div>
+				</div>
+				<div class="headerBlock__container container">
+					<div class="headerBlock__slider headerBlock__slider--js swiper-container">
+						<div class="swiper-wrapper">
+							<div class="headerBlock__slide swiper-slide"><img src="img/@2x/logo-1.png" alt=""/>
+							</div>
+							<div class="headerBlock__slide swiper-slide"><img src="img/@2x/logo-2.png" alt=""/>
+							</div>
+							<div class="headerBlock__slide swiper-slide"><img src="img/@2x/logo-3.png" alt=""/>
+							</div>
+							<div class="headerBlock__slide swiper-slide"><img src="img/@2x/logo-4.png" alt=""/>
+							</div>
+							<div class="headerBlock__slide swiper-slide"><img src="img/@2x/logo-5.png" alt=""/>
+							</div>
+							<div class="headerBlock__slide swiper-slide"><img src="img/@2x/logo-6.png" alt=""/>
+							</div>
+							<div class="headerBlock__slide swiper-slide"><img src="img/@2x/logo-7.png" alt=""/>
+							</div>
+							<div class="headerBlock__slide swiper-slide"><img src="img/@2x/logo-8.png" alt=""/>
+							</div>
+							<div class="headerBlock__slide swiper-slide"><img src="img/@2x/logo-9.png" alt=""/>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			<!-- end headerBlock-->
-			<!-- start sForm-->
-			<section class="sForm section" id="sForm">
+			<!-- start sAdvantages-->
+			<section class="sAdvantages section" id="sAdvantages">
 				<div class="container">
 					<div class="section-title text-center">
-						<h2>sForm</h2>
+						<h2>SKY CRYPTO&nbsp;&mdash; лучший сервис по&nbsp;покупке, обмену и&nbsp;хранению криптовалюты</h2>
 					</div>
-					<div class="row"></div>
-				</div>
+					<div class="row">
+								<div class="sAdvantages__col col-md-6">
+									<div class="sAdvantages__item">
+										<div class="sAdvantages__img-wrap"><img src="img/svg/sAdvantages-1.svg" alt=""/>
+										</div>
+										<div class="sAdvantages__text-wrap">
+											<div class="sAdvantages__title">Безопасность
+											</div>
+											<div class="sAdvantages__text">SKY CRYPTO защищает все сделки. Платформа блокирует криптовалюту на&nbsp;счету продавца во&nbsp;время сделки
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sAdvantages__col col-md-6">
+									<div class="sAdvantages__item">
+										<div class="sAdvantages__img-wrap"><img src="img/svg/sAdvantages-2.svg" alt=""/>
+										</div>
+										<div class="sAdvantages__text-wrap">
+											<div class="sAdvantages__title">Поддержка 24/7
+											</div>
+											<div class="sAdvantages__text">Наша поддержка круглосуточно работает для вас и&nbsp;быстро поможет решить спорный вопрос
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sAdvantages__col col-md-6">
+									<div class="sAdvantages__item">
+										<div class="sAdvantages__img-wrap"><img src="img/svg/sAdvantages-3.svg" alt=""/>
+										</div>
+										<div class="sAdvantages__text-wrap">
+											<div class="sAdvantages__title">P2P-обмен
+											</div>
+											<div class="sAdvantages__text">У&nbsp;каждого пользователя свой блокчейн-кошелек, который можно использовать для обмена на&nbsp;сайте или в&nbsp;боте
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sAdvantages__col col-md-6">
+									<div class="sAdvantages__item">
+										<div class="sAdvantages__img-wrap"><img src="img/svg/sAdvantages-4.svg" alt=""/>
+										</div>
+										<div class="sAdvantages__text-wrap">
+											<div class="sAdvantages__title">Низкие комиссии <br> за&nbsp;обмен
+											</div>
+											<div class="sAdvantages__text">0,5% при продаже и&nbsp;1% при покупке через веб-платформу или бота
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sAdvantages__col col-md-6">
+									<div class="sAdvantages__item">
+										<div class="sAdvantages__img-wrap"><img src="img/svg/sAdvantages-5.svg" alt=""/>
+										</div>
+										<div class="sAdvantages__text-wrap">
+											<div class="sAdvantages__title">Переводы внутри системы без комиссий
+											</div>
+											<div class="sAdvantages__text">Пользователи не&nbsp;платят за&nbsp;перевод криптовалюты внутри системы SKY CRYPTO
+											</div>
+										</div>
+									</div>
+								</div>
+					</div>
+				</div><a class="sAdvantages__btn" href="#"><img src="img/@2x/logo.png" alt=""/>Создать SKY-кошелек</a>
 			</section>
-			<!-- end sForm-->
-			<!-- start sContact-->
-			<section class="sContact section" id="sContact">
+			<!-- end sAdvantages-->
+			<!-- start sWork-->
+			<section class="sWork section" id="sWork">
 				<div class="container">
 					<div class="section-title text-center">
-						<h2>sContact</h2>
+						<h2>Как работает онлайн-обменник</h2>
 					</div>
-					<div class="row"></div>
+					<div class="sWork__text">SKY CRYPTO&nbsp;&mdash; простой и&nbsp;удобный P2P-обменник с&nbsp;функцией кошелька. Вы&nbsp;совершаете сделки напрямую с&nbsp;продавцами и&nbsp;покупателями, а&nbsp;платформа выступает в&nbsp;качестве гаранта что обеспечивает безопасность пользователям. Обменивайте криптовалюту, где и&nbsp;когда вам удобно в&nbsp;веб-версии и&nbsp;telegram-ботах
+					</div>
+					<div class="row">
+								<div class="sWork__col col-sm-auto">
+									<div class="sWork__img-wrap">
+										<!-- picture-->
+										<picture> 
+											<source srcset="img/@2x/webp/sWork-1.webp" type="image/webp"/><img src="img/@2x/sWork-1.png" alt=""/>
+										</picture>
+										<!-- /picture-->
+									</div>
+									<div class="sWork__label"><img src="img/svg/screen.svg" alt=""/>Web версия
+									</div>
+								</div>
+								<div class="sWork__col col-sm-auto">
+									<div class="sWork__img-wrap">
+										<!-- picture-->
+										<picture> 
+											<source srcset="img/@2x/webp/sWork-2.webp" type="image/webp"/><img src="img/@2x/sWork-2.png" alt=""/>
+										</picture>
+										<!-- /picture-->
+									</div>
+									<div class="sWork__label"><img src="img/svg/bitcoin.svg" alt=""/>Bitcoin Bot
+									</div>
+								</div>
+								<div class="sWork__col col-sm-auto">
+									<div class="sWork__img-wrap">
+										<!-- picture-->
+										<picture> 
+											<source srcset="img/@2x/webp/sWork-3.webp" type="image/webp"/><img src="img/@2x/sWork-3.png" alt=""/>
+										</picture>
+										<!-- /picture-->
+									</div>
+									<div class="sWork__label"><img src="img/svg/eth.svg" alt=""/>Ethereum Bot
+									</div>
+								</div>
+					</div>
 				</div>
 			</section>
-			<!-- end sContact-->
+			<!-- end sWork-->
+			<!-- start sAbout-->
+			<section class="sAbout section" id="sAbout">
+				<div class="container">
+					<div class="sAbout__wrap">
+						<h2>SKY PAY для вашего бизнеса</h2><img class="res-i" src="img/svg/about-img.svg" alt=""/>
+						<p>Сервис SKY PAY позволяет интернет-магазинам принимать оплату в&nbsp;биткоинах и&nbsp;эфириуме. Все предельно просто: покупатель выбирает удобный способ оплаты и&nbsp;переводит деньги продавцу, которые перечисляет биткоины на&nbsp;кошелек интернет-магазина. </p>
+						<p>Подключайте SKY PAY и&nbsp;принимайте оплату в&nbsp;криптовалюте. Мы&nbsp;позаботимся о&nbsp;том, чтобы вам было комфортно и&nbsp;выгодно. Покупатель платит рублями более 10&nbsp;способами, а&nbsp;магазин получает криптовалюту&nbsp;&mdash; биткоин или эфириум.</p><a class="sAbout__btn" href="#">Подробнее 
+						<svg class="icon icon-arrow-right ">
+							<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+						</svg></a>
+					</div>
+				</div>
+			</section>
+			<!-- end sAbout-->
+			<!-- start sBlog-->
+			<section class="sBlog section" id="sBlog">
+				<div class="container">
+					<div class="section-title">
+						<h2>Читайте наш блог</h2>
+					</div>
+					<div class="row">
+						<div class="sBlog__col sBlog__col--lg col-lg-6">
+									<div class="sBlog__item"><a class="sBlog__img-wrap bg-wrap" href="#">
+										<!-- picture-->
+										<picture class="picture-bg"> 
+											<source srcset="img/@2x/webp/blog-1.webp" type="image/webp" media="(min-width:576px)"/>
+											<source srcset="img/@1x/webp/blog-1.webp" type="image/webp"/>
+											<source srcset="img/@2x/blog-1.jpg" type="image/jpg" media="(min-width:576px)"/>
+											<source srcset="img/@1x/blog-1.jpg" type="image/jpg"/><img class="object-fit-js" src="img/@2x/blog-1.jpg" alt=""/>
+										</picture>
+										<!-- /picture--></a>
+										<div class="sBlog__caption">
+											<div class="sBlog__label">Биткоин
+											</div>
+											<div class="sBlog__title"><a href="#">Призрак Сатоси: перемещены биткоины из блока, добытого в феврале 2009 года</a>
+											</div>
+											<div class="row small text-secondary">
+												<div class="col-auto">20 мая 2020</div>
+												<div class="col-auto">
+													<svg class="icon icon-eye ">
+														<use xlink:href="img/svg/sprite.svg#eye"></use>
+													</svg>435
+												</div>
+											</div>
+										</div>
+									</div>
+						</div>
+						<div class="sBlog__col sBlog__col--sm col-lg-6">
+									<div class="sBlog__item"><a class="sBlog__img-wrap bg-wrap" href="#">
+										<!-- picture-->
+										<picture class="picture-bg"> 
+											<source srcset="img/@2x/webp/blog-2.webp" type="image/webp" media="(min-width:576px)"/>
+											<source srcset="img/@1x/webp/blog-2.webp" type="image/webp"/>
+											<source srcset="img/@2x/blog-2.jpg" type="image/jpg" media="(min-width:576px)"/>
+											<source srcset="img/@1x/blog-2.jpg" type="image/jpg"/><img class="object-fit-js" src="img/@2x/blog-2.jpg" alt=""/>
+										</picture>
+										<!-- /picture--></a>
+										<div class="sBlog__caption">
+											<div class="sBlog__label">Биткоин
+											</div>
+											<div class="sBlog__title"><a href="#">Роберт Кийосаки: «покупайте биткоин, спасите свой капитал»</a>
+											</div>
+											<div class="row small text-secondary">
+												<div class="col-auto">20 мая 2020</div>
+												<div class="col-auto">
+													<svg class="icon icon-eye ">
+														<use xlink:href="img/svg/sprite.svg#eye"></use>
+													</svg>435
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="sBlog__item"><a class="sBlog__img-wrap bg-wrap" href="#">
+										<!-- picture-->
+										<picture class="picture-bg"> 
+											<source srcset="img/@2x/webp/blog-3.webp" type="image/webp" media="(min-width:576px)"/>
+											<source srcset="img/@1x/webp/blog-3.webp" type="image/webp"/>
+											<source srcset="img/@2x/blog-3.jpg" type="image/jpg" media="(min-width:576px)"/>
+											<source srcset="img/@1x/blog-3.jpg" type="image/jpg"/><img class="object-fit-js" src="img/@2x/blog-3.jpg" alt=""/>
+										</picture>
+										<!-- /picture--></a>
+										<div class="sBlog__caption">
+											<div class="sBlog__label">Биткоин
+											</div>
+											<div class="sBlog__title"><a href="#">Игровой токен Atari можно будет купить за LTC</a>
+											</div>
+											<div class="row small text-secondary">
+												<div class="col-auto">20 мая 2020</div>
+												<div class="col-auto">
+													<svg class="icon icon-eye ">
+														<use xlink:href="img/svg/sprite.svg#eye"></use>
+													</svg>435
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="sBlog__item"><a class="sBlog__img-wrap bg-wrap" href="#">
+										<!-- picture-->
+										<picture class="picture-bg"> 
+											<source srcset="img/@2x/webp/blog-4.webp" type="image/webp" media="(min-width:576px)"/>
+											<source srcset="img/@1x/webp/blog-4.webp" type="image/webp"/>
+											<source srcset="img/@2x/blog-4.jpg" type="image/jpg" media="(min-width:576px)"/>
+											<source srcset="img/@1x/blog-4.jpg" type="image/jpg"/><img class="object-fit-js" src="img/@2x/blog-4.jpg" alt=""/>
+										</picture>
+										<!-- /picture--></a>
+										<div class="sBlog__caption">
+											<div class="sBlog__label">Биткоин
+											</div>
+											<div class="sBlog__title"><a href="#">Uniswap запустил вторую версию своего протокола</a>
+											</div>
+											<div class="row small text-secondary">
+												<div class="col-auto">20 мая 2020</div>
+												<div class="col-auto">
+													<svg class="icon icon-eye ">
+														<use xlink:href="img/svg/sprite.svg#eye"></use>
+													</svg>435
+												</div>
+											</div>
+										</div>
+									</div><a class="sBlog__btn" href="#">Еще больше статей
+							<svg class="icon icon-arrow-right ">
+								<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+							</svg></a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sBlog-->
+			<!-- start sUsers-->
+			<section class="sUsers section" id="sUsers">
+				<div class="container">
+					<div class="section-title text-center">
+						<h2>Свыше 100&nbsp;000 пользователей уже с&nbsp;нами</h2>
+						<div class="section-title__text">Приглашаем вас войти в&nbsp;будущее финансов вместе с&nbsp;SKY CRYPTO
+						</div>
+					</div>
+					<div class="sc-RefOD hQpGm">
+						<div class="row header">
+							<div class="column">Дата</div>
+							<div class="column">Валюта</div>
+							<div class="column">Действие</div>
+							<div class="column">Пользователь</div>
+							<div class="column">Сумма</div>
+						</div>
+								<div class="row">
+									<div class="column">  28.05.20, 03:40</div>
+									<div class="column"><img src="img/svg/eth.svg" alt=""/>Ethereum
+									</div>
+									<div class="column"> <span class="text-success">Вывод средств</span>
+									</div>
+									<div class="column"> Rx**6</div>
+									<div class="column"> 0,85 ETH</div>
+								</div>
+								<div class="row">
+									<div class="column">  28.05.20, 03:40</div>
+									<div class="column"><img src="img/svg/bitcoin.svg" alt=""/>Bitcoin
+									</div>
+									<div class="column"> <span class="text-primary">Активация промокода</span>
+									</div>
+									<div class="column"> Rx**6</div>
+									<div class="column"> 0,85 ETH</div>
+								</div>
+								<div class="row">
+									<div class="column">  28.05.20, 03:40</div>
+									<div class="column"><img src="img/svg/eth.svg" alt=""/>Ethereum
+									</div>
+									<div class="column"> <span class="text-success">Вывод средств</span>
+									</div>
+									<div class="column"> Rx**6</div>
+									<div class="column"> 0,85 ETH</div>
+								</div>
+								<div class="row">
+									<div class="column">  28.05.20, 03:40</div>
+									<div class="column"><img src="img/svg/bitcoin.svg" alt=""/>Bitcoin
+									</div>
+									<div class="column"> <span class="text-primary">Активация промокода</span>
+									</div>
+									<div class="column"> Rx**6</div>
+									<div class="column"> 0,85 ETH</div>
+								</div>
+								<div class="row">
+									<div class="column">  28.05.20, 03:40</div>
+									<div class="column"><img src="img/svg/eth.svg" alt=""/>Ethereum
+									</div>
+									<div class="column"> <span class="text-success">Вывод средств</span>
+									</div>
+									<div class="column"> Rx**6</div>
+									<div class="column"> 0,85 ETH</div>
+								</div>
+								<div class="row">
+									<div class="column">  28.05.20, 03:40</div>
+									<div class="column"><img src="img/svg/bitcoin.svg" alt=""/>Bitcoin
+									</div>
+									<div class="column"> <span class="text-primary">Активация промокода</span>
+									</div>
+									<div class="column"> Rx**6</div>
+									<div class="column"> 0,85 ETH</div>
+								</div>
+					</div><a class="sUsers__btn" href="#">Присоединиться</a>
+				</div>
+			</section>
+			<!-- end sUsers-->
 			<footer class="footer block-with-lazy">
 				<div class="container">
-					<h2>footer</h2>
+					<div class="row">
+						<div class="footer__col col-md-auto"><a class="footer__logo" href="/"><img src="img/svg/logo.svg" alt=""/><span class="footer__logo-title">SKY CRYPTO</span></a>
+						</div>
+						<div class="col">
+							<div class="soc"><a class="soc__item soc__item soc__item--vk" href="#" target="_blank">
+								<svg class="icon icon-vk ">
+									<use xlink:href="img/svg/sprite.svg#vk"></use>
+								</svg></a><a class="soc__item soc__item soc__item--instagram" href="#" target="_blank">
+								<svg class="icon icon-instagram ">
+									<use xlink:href="img/svg/sprite.svg#instagram"></use>
+								</svg></a><a class="soc__item soc__item soc__item--facebook" href="#" target="_blank">
+								<svg class="icon icon-facebook ">
+									<use xlink:href="img/svg/sprite.svg#facebook"></use>
+								</svg></a><a class="soc__item soc__item soc__item--twitter" href="#" target="_blank">
+								<svg class="icon icon-twitter ">
+									<use xlink:href="img/svg/sprite.svg#twitter"></use>
+								</svg></a><a class="soc__item soc__item soc__item--youtube" href="#" target="_blank">
+								<svg class="icon icon-youtube ">
+									<use xlink:href="img/svg/sprite.svg#youtube"></use>
+								</svg></a>
+							</div>
+							<div class="footer__text">HONKONG TANG DYNASTY INDUSTRY TRADE LIMITED.<br/>Company Registration No. : 2658020
+							</div>
+						</div>
+						<div class="footer__col col-md-auto text-md-right"><a class="tdu" href="#">Условия пользования</a><br/><a class="tdu" href="#">Политика безопасности</a>
+						</div>
+					</div>
 				</div>
 			</footer>
 		</div>
@@ -103,16 +613,16 @@
 					<div class="text-center">
 						<div class="form-wrap__title h3 ttu">Обратный звонок
 						</div>
-						<p>Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течении 15&nbsp;минут</p>
+						<p>Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
 					</div>
-					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше Имя" name="text" required="required"/> 
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше Имя" step="" name="text" required="required"/> 
 					</div>
 					<!-- +e.input-wrap-->
-					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш телефон" name="tel" required="required"/>
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш телефон" step="" name="tel" required="required"/>
 					</div>
 					<!-- +e.input-wrap--><input class="form-wrap__btn" type="submit" value="Рассчитать"/>
-					<div class="form-wrap__polite">
-						<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox" checked="checked"/><span class="custom-input__lab"></span><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
+					<div class="form-wrap__policy">
+						<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox" checked="checked"/><span class="custom-input__lab"></span><span class="custom-input__text">Я согласен с <a href="#">условиями и правилами сервиса</a></span>
 						</label>
 					</div>
 				</form>
@@ -136,6 +646,8 @@
 		<script src="libs/svg4everybody/svg4everybody.min.js"></script>
 		<!-- /for svg libs-->
 		<script src="libs/inputmask/jquery.inputmask.min.js"></script>
+		<script src="libs/chosen-js/chosen.jquery.min.js"></script>
+		<script src="js/Image-Select/ImageSelect.jquery.js"></script>
 		<script src="js/common.js"></script>
 	</body>
 </html>

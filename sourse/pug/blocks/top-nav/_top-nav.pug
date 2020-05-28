@@ -8,20 +8,47 @@ mixin mob-mnu()
 		//- request.responseType = 'json';
 		//- let dataJson = JSON.parse(json);
 	//- h1= dataJson['lala'] 
-	+b.toggle-menu-mobile--js.d-lg-none
-		span
-	+b.menu-mobile--js.d-lg-none
+	
+	+b.menu-mobile--js.d-xl-none
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
 		
 			+mnu()
-			.text-right
+			+e.footer
+				+e.footer-item
+					img(src="img/svg/bitcoin.svg", alt="")
+					| 722 259.49 RUB 
+				+e.footer-item
+					img(src="img/svg/eth.svg", alt="")
+					| 722 259.49 RUB 
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.container
-			+mnu()
-					
+			.row
+				.col-xl-auto.col
+					+e.logo(href="/")
+						img(src="img/svg/logo.svg", alt="")
+						+e.logo-title SKY CRYPTO
+				.col.d-none.d-xl-block
+					+mnu()
+				.col-auto
+					+b.custom-select-wrap--lang
+						select.custom-select-js 
+							+option("En",'img/svg/eng.svg')
+							+option("Ru",'img/svg/Rus.svg')
+				.col-auto.d-none.d-md-block
+					+b.custom-select-wrap--currency
+						select.custom-select-js
+							
+							+option("722 259.49 RUB",'img/svg/bitcoin.svg')
+							+option("Эфириум (ETH)",'img/svg/eth.svg')
+				.col-auto
+					+e.btn(href="#") Вход
+				.col-auto.d-xl-none
+					+b.toggle-menu-mobile--js
+						span
+
 	// end top-nav

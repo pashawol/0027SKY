@@ -3,21 +3,81 @@
 .soc{
 	margin: 0 rem(-5px);
 	display: flex;
+	justify-content: center;
+	margin-bottom: rem(23);
+	flex-wrap: wrap;
+		.icon {
+			font-size: 16px;
+			color: #ffffff;
+		}
 	&__item{
 		text-decoration: none !important;
 		margin: 0 rem(5px);
 		vertical-align: middle;
 		@include mt;
 		display: block;
+		flex: 0 0 30px;
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&--vk{
+				background: #4A76A8;
+				.icon{
+					font-size: 10px;
+				}
+				&:hover{
+					background-color: darken($color: #000000, $amount: 0);
+					background: darken($color: #4A76A8, $amount: 10%) ;
+
+				}
+		}
+		&--instagram{
+			background: #E94754;
+			
+			&:hover{
+				background: darken($color: #E94754, $amount: 10%) ;
+
+			}
+		}
+		&--facebook{
+			background: #1877F2;
+			
+			&:hover{
+				background: darken($color: #1877F2, $amount: 10%) ;
+
+			}
+		}
+		&--twitter{
+			background: #03A9F4;
+				.icon {
+					font-size: 13px;
+				}
+			&:hover{
+				background: darken($color: #03A9F4, $amount: 10%) ;
+
+			}
+		}
+		&--youtube{
+				.icon {
+					font-size: 14px;
+				}
+			background: #FF0000;
+			&:hover{
+				background: darken($color: #FF0000, $amount: 10%) ;
+
+			}
+		}
 		&:hover{
 		 	// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
-			opacity: .6 ;
+		 
 		}
 		
 	}
-	.icon{
-	font-size: rem(30);
-	}
+
+
 	 
 
 }

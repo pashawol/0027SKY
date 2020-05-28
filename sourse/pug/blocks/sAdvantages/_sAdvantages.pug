@@ -1,0 +1,25 @@
+mixin sAdvantages()
+	// start sAdvantages
+	+b.SECTION.sAdvantages.section#sAdvantages&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 SKY CRYPTO&nbsp;&mdash; лучший сервис по&nbsp;покупке, обмену и&nbsp;хранению криптовалюты
+				
+			.row
+				mixin item(i,t,p)
+					+e.col.col-md-6
+						+e.item
+							+e.img-wrap
+								img(src=`img/svg/sAdvantages-${i}.svg`, alt="")
+							+e.text-wrap
+								+e.title!= t
+								+e.text!= p
+				+item('1','Безопасность','SKY CRYPTO защищает все сделки. Платформа блокирует криптовалюту на&nbsp;счету продавца во&nbsp;время сделки')
+				+item('2','Поддержка 24/7','Наша поддержка круглосуточно работает для вас и&nbsp;быстро поможет решить спорный вопрос')
+				+item('3','P2P-обмен','У&nbsp;каждого пользователя свой блокчейн-кошелек, который можно использовать для обмена на&nbsp;сайте или в&nbsp;боте')
+				+item('4','Низкие комиссии <br> за&nbsp;обмен','0,5% при продаже и&nbsp;1% при покупке через веб-платформу или бота')
+				+item('5','Переводы внутри системы без комиссий','Пользователи не&nbsp;платят за&nbsp;перевод криптовалюты внутри системы SKY CRYPTO')
+		+e.btn(href="#")
+			img(src="img/@2x/logo.png", alt="")
+			| Создать SKY-кошелек
+	// end sAdvantages

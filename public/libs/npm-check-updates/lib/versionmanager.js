@@ -173,7 +173,7 @@ function isUpgradeable(current, latest) {
     // remove the constraint (e.g. ^1.0.1 -> 1.0.1) to allow upgrades that satisfy the range, but are out of date
     const [range] = semverutils.parseRange(current);
     if (!range) {
-        throw new Error(`"${current}" could not be parsed by semver-utils. This is probably a bug. Please file an issue at https://github.com/tjunnone/npm-check-updates.`);
+        throw new Error(`"${current}" could not be parsed by semver-utils. This is probably a bug. Please file an issue at https://github.com/raineorshine/npm-check-updates.`);
     }
     const version = versionUtil.stringify(range);
 
@@ -440,7 +440,7 @@ function queryVersions(packageMap, options = {}) {
             } else {
 
                 // print a hint about the --timeout option for network timeout errors
-                if (/(Response|network) timeout/i.test(errorMessage)) {
+                if (process.env.NODE_ENV !== 'test' && /(Response|network) timeout/i.test(errorMessage)) {
                     console.error('\n\n' + chalk.red('FetchError: Request Timeout. npm-registry-fetch defaults to 30000 (30 seconds). Try setting the --timeout option (in milliseconds) to override this.') + '\n');
                 }
 

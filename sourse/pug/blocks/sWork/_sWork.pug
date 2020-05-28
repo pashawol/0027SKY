@@ -1,0 +1,19 @@
+mixin sWork()
+	// start sWork
+	+b.SECTION.sWork.section#sWork&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Как работает онлайн-обменник
+			+e.text SKY CRYPTO&nbsp;&mdash; простой и&nbsp;удобный P2P-обменник с&nbsp;функцией кошелька. Вы&nbsp;совершаете сделки напрямую с&nbsp;продавцами и&nbsp;покупателями, а&nbsp;платформа выступает в&nbsp;качестве гаранта что обеспечивает безопасность пользователям. Обменивайте криптовалюту, где и&nbsp;когда вам удобно в&nbsp;веб-версии и&nbsp;telegram-ботах
+			.row
+				mixin item(img,i,t)
+					+e.col.col-sm-auto&attributes(attributes)
+						+e.img-wrap
+							+pic(img,'','',0)
+						+e.label
+							img(src=`img/svg/${i}`, alt="")
+							= t
+				+item("sWork-1.png","screen.svg",'Web версия')
+				+item("sWork-2.png","bitcoin.svg",'Bitcoin Bot')
+				+item("sWork-3.png","eth.svg",'Ethereum Bot')
+	// end sWork

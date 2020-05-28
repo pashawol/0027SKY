@@ -89,41 +89,28 @@ mixin arrow()
 //- scial buttons
 mixin soc()
 	+b.soc
-		mixin item()
-			+e.A.item(href="№" target="_blank")
-				block
-		+item()
-			+icon('fb')
-		
-		+item()
-			+icon('insta')
-		
-		+item()
-			+icon('vk')
+		mixin item(t)
+			+e.A.item(href="#" class=`soc__item--${t}` target="_blank")
+				+icon(t)
+		+item('vk') 
+		+item('instagram') 
+		+item('facebook') 
+		+item('twitter') 
+		+item('youtube') 
 //- /scial buttons
 //- WP menu
 mixin mnu()
 	-
 		var nav= { 
-			"Наши работы":"#",
-			"Цены":"#",
-			"Калькулятор":"#",
-			"Акции":"#" ,
-			"Заказать":"#",
+			"Для телефона":"#",
+			"Для бизнеса":"#",
+			"Обучение":"#",
+			"FAQ":"#" ,
+			"Контакты":"#",
+			"Зарабатывай":"#",
 			}
 	ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
-		li.menu-item.menu-item-has-children
-			a(href="#" itemprop="url") О нас
-			ul.sub-menu
-				-
-					var subnav= { 
-						"Строительство загородных домов":"#",
-						"Отделка загородных домов":"#",
-						"Покраска деревянных домов":"#",
-						"Штукатурные фасады загородных домов":"#" ,
-						}
-				each sublinkPatch, sublinkName in nav
-					li.menu-item(itemprop="item" ): a(href= sublinkPatch itemprop="url")= sublinkName
+	 
 		each linkPatch, linkName in nav
 			li.menu-item(itemprop="item" ): a(href= linkPatch itemprop="url")= linkName
 
@@ -131,14 +118,12 @@ mixin mnu()
 mixin mnu()
 	-
 		var nav= {
-			"Главная":"/",
-			"Услуги  ":"#",
-			"Подбор септика   ":"#",
-			"Акции ":"#"," О компании  ":"#",
-			" Доставка и оплата ":"#",
-			" Клиентам  ":"#",
-			" Наши работы   ":"#",
-			"Контакты ":"#"
+			"Для телефона":"#",
+			"Для бизнеса":"#",
+			"Обучение":"#",
+			"FAQ":"#" ,
+			"Контакты":"#",
+			"Зарабатывай":"#",
 			}
 	+e.UL.nav(itemscope itemtype="http://schema.org/SiteNavigationElement")
 		each linkPatch, linkName in nav
@@ -169,11 +154,11 @@ mixin pic(i, bg, lazy="lazy", media='576px')
 	// picture
 	picture( class= lazy)&attributes(attributes) 
 		if media
-			each val in [exp] 
+			each val in ['webp',exp] 
 				each val2 in [smpath2,smpath1] 
 					+src(i,val,`${val2 + (val ==  "webp" ? "/webp" : "") }`,lazy,"source")(media=(val2 == smpath2 ? "(min-width:"+ media+")" : null))
 		else 
-			//- +src(i,'webp',smpath2+`/webp`,lazy,"source")
+			+src(i,'webp',smpath2+`/webp`,lazy,"source")
 			//- // /webp images  
 		+src(i, exp,smpath2, lazy,"",bg) 
 	// /picture
@@ -257,3 +242,6 @@ mixin ie11()
 	//- modernizer and for ie11
 	 
 	<!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
+
+mixin option(p, i)
+	option(value= p data-img-src= (i || 'img/@1x/video.jpg'))&attributes(attributes)= p

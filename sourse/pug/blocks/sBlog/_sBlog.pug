@@ -1,0 +1,31 @@
+mixin sBlog()
+	// start sBlog
+	+b.SECTION.sBlog.section#sBlog&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Читайте наш блог
+				
+			.row
+				mixin item(i,t)
+					+e.item
+						+e.img-wrap.bg-wrap(href="#")
+							+pic(i,'bg','')(class="picture-bg")
+						+e.caption
+							+e.label Биткоин
+							+e.title
+								a(href="#")= t
+							.row.small.text-secondary
+								.col-auto 20 мая 2020
+								.col-auto
+									+icon("eye")
+									| 435
+				+e.col--lg.col-lg-6
+					+item("blog-1",'Призрак Сатоси: перемещены биткоины из блока, добытого в феврале 2009 года')
+				+e.col--sm.col-lg-6
+					+item("blog-2",'Роберт Кийосаки: «покупайте биткоин, спасите свой капитал»')
+					+item("blog-3",'Игровой токен Atari можно будет купить за LTC')
+					+item("blog-4",'Uniswap запустил вторую версию своего протокола')
+					+e.btn(href="#")
+						| Еще больше статей
+						+icon("arrow-right")
+	// end sBlog

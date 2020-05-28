@@ -1,0 +1,43 @@
+mixin sUsers()
+	// start sUsers
+	+b.SECTION.sUsers.section#sUsers&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Свыше 100&nbsp;000 пользователей уже с&nbsp;нами
+				+e.text Приглашаем вас войти в&nbsp;будущее финансов вместе с&nbsp;SKY CRYPTO
+			.sc-RefOD.hQpGm
+				.row.header
+					.column Дата
+					.column Валюта
+					.column Действие
+					.column Пользователь
+					.column Сумма
+				mixin item(i,t)
+					.row
+						.column
+							
+							|   28.05.20, 03:40
+						.column
+							img(src=`img/svg/${i}`, alt="")
+								
+							= t
+						.column 
+							block
+						.column  Rx**6
+						.column  0,85 ETH
+				+item("eth.svg",'Ethereum')
+					span.text-success Вывод средств
+				+item("bitcoin.svg",'Bitcoin')
+					span.text-primary Активация промокода
+					
+				+item("eth.svg",'Ethereum')
+					span.text-success Вывод средств
+				+item("bitcoin.svg",'Bitcoin')
+					span.text-primary Активация промокода
+
+				+item("eth.svg",'Ethereum')
+					span.text-success Вывод средств
+				+item("bitcoin.svg",'Bitcoin')
+					span.text-primary Активация промокода
+			+e.btn(href="#") Присоединиться
+	// end sUsers

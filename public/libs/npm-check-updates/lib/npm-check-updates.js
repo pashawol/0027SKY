@@ -38,7 +38,7 @@ const logLevels = {
 
 // time to wait for stdin before printing a warning
 const stdinWarningTime = 5000;
-const stdinWarningMessage = `Hmmmmm... this is taking a long time. Your console is telling me to wait for input \non stdin, but maybe that is not what you want.\nTry ${chalk.cyan('winpty ncu.cmd')}, or specify a package file explicitly with ${chalk.cyan('--packageFile package.json')}. \nSee https://github.com/tjunnone/npm-check-updates/issues/136#issuecomment-155721102`;
+const stdinWarningMessage = `Hmmmmm... this is taking a long time. Your console is telling me to wait for input \non stdin, but maybe that is not what you want.\nTry ${chalk.cyan('winpty ncu.cmd')}, or specify a package file explicitly with ${chalk.cyan('--packageFile package.json')}. \nSee https://github.com/raineorshine/npm-check-updates/issues/136#issuecomment-155721102`;
 
 //
 // Helper functions
@@ -216,6 +216,9 @@ function analyzeProjectDependencies(options, pkgData, pkgFile) {
                 _.pick(jph.parse(newPkgData), 'dependencies', 'devDependencies', 'optionalDependencies') :
                 selectedNewDependencies;
 
+        // will be overwritten with the result of writePackageFile so that the return promise waits for the package file to be written
+        let writePromise = Promise.resolve();
+
         // split the deps into satisfied and unsatisfied to display in two separate tables
         const deps = Object.keys(selectedNewDependencies);
         const satisfied = cint.toObject(deps, dep =>
@@ -243,28 +246,28 @@ function analyzeProjectDependencies(options, pkgData, pkgFile) {
 
         if (numUpgraded > 0) {
 
-            // if error-level is 2, immediately exit with error code
-            if (options.errorLevel === 2) {
-                programError(options, '\nDependencies not up-to-date');
-            }
-
             // if there is a package file, write the new package data
             // otherwise, suggest ncu -u
             if (pkgFile) {
                 if (options.upgrade) {
-                    // short-circuit return in order to wait for write operation, but still return the same output
-                    return writePackageFile(pkgFile, newPkgData)
+                    writePromise = writePackageFile(pkgFile, newPkgData)
                         .then(() => {
                             print(options, `\nRun ${chalk.cyan('npm install')} to install new versions.\n`);
-                            return output;
                         });
                 } else {
                     print(options, `\nRun ${chalk.cyan('ncu -u')} to upgrade ${getPackageFileName(options)}`);
                 }
             }
+
+            // if error-level is 2, exit with error code
+            if (options.errorLevel === 2) {
+                writePromise.then(() => {
+                    programError(options, '\nDependencies not up-to-date');
+                });
+            }
         }
 
-        return output;
+        return writePromise.then(() => output);
     });
 }
 

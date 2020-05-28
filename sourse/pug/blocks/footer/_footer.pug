@@ -1,4 +1,17 @@
 mixin footer()
 	+b.FOOTER.footer.block-with-lazy
 		.container
-			h2 footer
+			.row
+				+e.col.col-md-auto
+					+e.logo(href="/")
+							img(src="img/svg/logo.svg", alt="")
+							+e.logo-title SKY CRYPTO
+				.col
+					+soc()
+					+e.text HONKONG TANG DYNASTY INDUSTRY TRADE LIMITED.
+						br
+						| Company Registration No. : 2658020
+				+e.col.col-md-auto.text-md-right
+					a.tdu(href="#") Условия пользования
+					br
+					a.tdu(href="#") Политика безопасности
