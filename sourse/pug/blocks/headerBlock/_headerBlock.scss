@@ -155,18 +155,21 @@ color: $body-color;
 					}
 					max-width: 100% !important;
 			margin-top: auto;
-			padding: 0;
+			// padding: 0;
 		} 
 		&__slide{
-			display: flex;
+			// display: flex;
 			align-items: center;
 			justify-content: center;
-			height: rem(40);
+			height: rem(60);
+			img{
+				max-height: 100%;
+			}
 		}
 		@media (max-width: 1400px){
 			&__container{
-padding-left: 0 !important;
-padding-right: 0 !important;
+// padding-left: 0 !important;
+// padding-right: 0 !important;
 				}
 			.swiper-wrapper{
 				img{

@@ -27,7 +27,13 @@
 			color: $body-color;
 		}
 	}
-	
+	.top-nav__link--active{
+		color: $primary !important;
+		border-bottom: 1px solid currentColor;
+		&:hover{
+			border-color: transparent;
+		}
+	}
 	&.fixed {
 		padding-top: rem(15);
 		padding-bottom: rem(15);
@@ -153,17 +159,22 @@
 	select{
 		color: $body-color;
 		background: none;
-		border-color: $secondary; 
-		text-align: center;
+		border-color: #E5E5E5;
+		text-align: center !important;
 		width: rem(42);
+		// width: rem(82);
+		text-indent: 10%;
 		margin-left: auto;
+		text-align: -webkit-center;
+		// direction:rtl;
+		-webkit-appearance: none;
 		// padding-left: 0;
 		// padding-right: 0;
 	}
 }
 .custom-select-wrap--lang{
 	select{
-		appearance: none !important;
+		// appearance: none !important;
 	}
 	select::-ms-expand {
 		display: none;

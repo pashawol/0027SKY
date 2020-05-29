@@ -15,6 +15,9 @@
 	&__text{
 		margin-bottom: rem(30);
 	}
+	.custom-select-wrap{
+		@extend .form-group;
+	}
  	&__input-wrap{
 		 position: relative;
 		 label{

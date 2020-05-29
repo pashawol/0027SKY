@@ -443,9 +443,15 @@ iframe {
 		border-color: #FFA318;
 	}
 	&:focus{
+			background: #FFA318 !important;
+			border-color: #FFA318 !important;
 		box-shadow: 0 0 0 #F06A0B, 0px 0 0 rgba(0, 0, 0, 0.25) !important;
 
 	}
+}
+
+.btn-primary{
+	box-shadow: none !important;
 }
 
 .btn-outline{

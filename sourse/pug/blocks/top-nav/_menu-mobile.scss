@@ -3,7 +3,11 @@
 // мобильное меню
 $h: em(2);
 .page-main .top-nav:not(.fixed) .toggle-menu-mobile{
-	color: #ffffff;
+	&:not(.on) span,
+	span:after,
+	span:before{
+background-color: #ffffff; 
+	}
 
 }
 .toggle-menu-mobile {
@@ -46,7 +50,7 @@ $h: em(2);
 		// width: 32px;
 		width: 1em;
 		height: 2px;
-		background-color: currentColor;
+		background-color: $body-color;
 		transition: all 0.3s;
 		backface-visibility: hidden;
 		border-radius: 6px;

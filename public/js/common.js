@@ -14,6 +14,7 @@ var JSCCommon = {
 			touch: false,
 			type: 'inline',
 			backFocus: false,
+			autoFocus: false,
 			beforeLoad: function beforeLoad() {},
 			i18n: {
 				en: {
@@ -143,8 +144,8 @@ function eventHandler() {
 		freeMode: true,
 		watchOverflow: true,
 		lazy: {
-			loadPrevNext: true,
-			loadPrevNextAmount: 12
+			loadPrevNext: true // loadPrevNextAmount: 12,
+
 		}
 	}); // modal window
 

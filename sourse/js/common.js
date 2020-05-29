@@ -13,6 +13,7 @@ const JSCCommon = {
 			touch: false,
 			type: 'inline',
 			backFocus: false,
+			autoFocus: false,
 			beforeLoad: function () {
 			
 			},
@@ -167,7 +168,7 @@ function eventHandler() {
 		watchOverflow: true,
 		lazy: {
 			loadPrevNext: true,
-			loadPrevNextAmount: 12,
+			// loadPrevNextAmount: 12,
 		},
 
 	});
