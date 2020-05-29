@@ -156,14 +156,20 @@
 	@include media-breakpoint-down(sm) {}
 
 	@include media-breakpoint-down(xs) {}
+	&:not(.fixed){
+		select{
+			border-color: #3C4C62;
+
+		}
+	}
 	select{
 		color: $body-color;
 		background: none;
 		border-color: #E5E5E5;
 		text-align: center !important;
-		width: rem(42);
+		width: rem(44);
 		// width: rem(82);
-		text-indent: 10%;
+		text-indent: 12%;
 		margin-left: auto;
 		text-align: -webkit-center;
 		// direction:rtl;

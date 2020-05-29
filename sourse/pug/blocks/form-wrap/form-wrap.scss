@@ -18,6 +18,10 @@
 	.custom-select-wrap{
 		@extend .form-group;
 	}
+	&__title{
+		margin-bottom: 8px;
+		display: block;
+	}
  	&__input-wrap{
 		 position: relative;
 		 label{
@@ -46,6 +50,7 @@
  		display: block;
 	 }
 	 &__policy{
+		 padding-top: 10px;
 				a{
 				 @extend .tdu;
 				}
