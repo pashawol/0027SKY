@@ -144,9 +144,10 @@ function eventHandler() {
 		freeMode: true,
 		watchOverflow: true,
 		autoplay: {
-			delay: 800
+			delay: 10 // waitForTransition: false,
+
 		},
-		speed: 2500,
+		speed: 10000,
 		loop: true,
 		breakpoints: {
 			992: {
