@@ -27,6 +27,7 @@
 
 					position: absolute;
 					left: 85%;
+					max-height: rem(690);
 				}
 			@include media-breakpoint-up(xl) {
 				left: 100%;
