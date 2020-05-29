@@ -143,6 +143,20 @@ function eventHandler() {
 		spaceBetween: 20,
 		freeMode: true,
 		watchOverflow: true,
+		autoplay: {
+			delay: 800
+		},
+		speed: 2500,
+		loop: true,
+		breakpoints: {
+			992: {
+				loop: false,
+				speed: 400,
+				autoplay: {
+					delay: 0
+				}
+			}
+		},
 		lazy: {
 			loadPrevNext: true // loadPrevNextAmount: 12,
 
