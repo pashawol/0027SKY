@@ -135,13 +135,13 @@ mixin mnu()
 
 mixin pic(i, bg, lazy="lazy", media='576px')
 	-
-		const smpath2 = "2x"
-		const smpath1 = "1x"
+		const smpath2 = "2"
+		const smpath1 = "1"
 		let expArr = i.split(".")
 		let exp = (expArr[1] || 'jpg')
 	mixin src(i, exp, path , lazy, source, bg)
 		-
-			const url= `img/@${path}/${expArr[0]}.${exp}`
+			const url= `img/${path}/${expArr[0]}.${exp}`
 			const ifLazy = (lazy== "lazy")
 			const src = ( ifLazy ? "#" : url)
 			const data = (ifLazy ?  url  : null)
@@ -156,11 +156,11 @@ mixin pic(i, bg, lazy="lazy", media='576px')
 		if media
 			each val in ['webp',exp] 
 				each val2 in [smpath2,smpath1] 
-					+src(i,val,`${val2 + (val ==  "webp" ? "/webp" : "") }`,lazy,"source")(media=(val2 == smpath2 ? "(min-width:"+ media+")" : null))
+					+src(i,val,`${(val ==  "webp" ? "webp/" : "png/") + val2 }`,lazy,"source")(media=(val2 == smpath2 ? "(min-width:"+ media+")" : null))
 		else 
-			+src(i,'webp',smpath2+`/webp`,lazy,"source")
+			+src(i,'webp',`webp/` + smpath2,lazy,"source")
 			//- // /webp images  
-		+src(i, exp,smpath2, lazy,"",bg) 
+		+src(i, exp,'png/' + smpath2, lazy,"",bg) 
 	// /picture
 
 mixin pic2({i, bg, lazy="lazy", media='576px'})

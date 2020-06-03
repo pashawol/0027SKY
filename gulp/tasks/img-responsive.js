@@ -14,11 +14,11 @@ module.exports = function () {
 			.pipe($.gp.responsive({
 				'*': [{
 					// Produce @2x images
-					width: '100%', quality: 75, progressive: true, rename: { prefix: '@2x/', },
+					width: '100%', quality: 75, progressive: true, rename: { prefix: 'png/2/', },
 				},
 				{
 					// Produce @1x images
-					width: '50%', quality: 75, progressive: true, rename: { prefix: '@1x/', }
+					width: '50%', quality: 75, progressive: true, rename: { prefix: 'png/1/', }
 				},
 
 				//  {
@@ -33,7 +33,7 @@ module.exports = function () {
 				// },
 
 				{
-					width: '100%', quality: 75, progressive: true, rename: { prefix: '@2x/webp/', extname: '.webp', },
+					width: '100%', quality: 75, progressive: true, rename: { prefix: 'webp/2/', extname: '.webp', },
 				},
 
 				// // { 	width: '100%',quality: 1, progressive: true,  rename: { prefix: '@0x/webp/', extname: '.webp', 	},
@@ -41,7 +41,7 @@ module.exports = function () {
 
 
 				{
-					width: '50%', quality: 75, progressive: true, rename: { prefix: '@1x/webp/', extname: '.webp', },
+					width: '50%', quality: 75, progressive: true, rename: { prefix: 'webp/1/', extname: '.webp', },
 				},
 
 					// { 	width: '25%',quality: 75, progressive: true,  rename: {  prefix: '@0.5x/webp/',  extname: '.webp', 	},
