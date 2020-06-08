@@ -9,11 +9,14 @@ mixin sWork()
 				mixin item(img,i,t)
 					+e.col.col-sm-auto&attributes(attributes)
 						+e.img-wrap
-							+pic(img,'','',0)
+							+pic(img+'-mega.png','','',0)
+							img(src=`img/png/1/${img}-mega.png`, alt="")
+							
+					 
 						+e.label(href='#')
 							img(src=`img/svg/${i}`, alt="")
 							= t
-				+item("sWork-1.png","screen.svg",'Web версия')
-				+item("sWork-2.png","bitcoin.svg",'Bitcoin Bot')
-				+item("sWork-3.png","eth.svg",'Ethereum Bot')
+				+item("sWork-1","screen.svg",'Web версия')
+				+item("sWork-2","bitcoin.svg",'Bitcoin Bot')
+				+item("sWork-3","eth.svg",'Ethereum Bot')
 	// end sWork

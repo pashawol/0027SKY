@@ -1,8 +1,10 @@
 html {
-	-webkit-font-smoothing: antialiased;
-	-webkit-overflow-scrolling: touch;
+	// -webkit-font-smoothing: antialiased;
+	// -webkit-overflow-scrolling: touch;
 }
+img{
 
+}
 .pixel-perfect {
 	top: 0;
 	@include a-cent(x);

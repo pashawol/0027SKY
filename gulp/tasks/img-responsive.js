@@ -14,11 +14,11 @@ module.exports = function () {
 			.pipe($.gp.responsive({
 				'*': [{
 					// Produce @2x images
-					width: '100%', quality: 75, progressive: true, rename: { prefix: 'png/2/', },
+					width: '100%',  rename: { prefix: 'png/2/', },
 				},
 				{
 					// Produce @1x images
-					width: '50%', quality: 75, progressive: true, rename: { prefix: 'png/1/', }
+					width: '50%',  rename: { prefix: 'png/1/', }
 				},
 
 				//  {
@@ -29,11 +29,11 @@ module.exports = function () {
 
 				//  {
 				// 	// Produce @0.5x images
-				// 	width: '25%', quality: 75, progressive: true,  rename: { prefix: '@0.5x/', }
+				// 	width: '25%',   rename: { prefix: '@0.5x/', }
 				// },
 
 				{
-					width: '100%', quality: 75, progressive: true, rename: { prefix: 'webp/2/', extname: '.webp', },
+					width: '100%',  rename: { prefix: 'webp/2/', extname: '.webp', },
 				},
 
 				// // { 	width: '100%',quality: 1, progressive: true,  rename: { prefix: '@0x/webp/', extname: '.webp', 	},
@@ -41,7 +41,7 @@ module.exports = function () {
 
 
 				{
-					width: '50%', quality: 75, progressive: true, rename: { prefix: 'webp/1/', extname: '.webp', },
+					width: '50%',  rename: { prefix: 'webp/1/', extname: '.webp', },
 				},
 
 					// { 	width: '25%',quality: 75, progressive: true,  rename: {  prefix: '@0.5x/webp/',  extname: '.webp', 	},
