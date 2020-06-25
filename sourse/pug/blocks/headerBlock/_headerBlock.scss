@@ -208,6 +208,7 @@
 					margin-right: auto;
 			text-align: left;
 			picture{
+
 				img{
 					@include media-breakpoint-up(xl) {
 					max-width: rem(650);
@@ -223,8 +224,10 @@
 					margin-top: rem(-40);
 				}
 				margin-bottom: 1.5rem;
+				text-align: center;
 				@include media-breakpoint-up(lg) {
 					position: absolute;
+					text-align: left;
 
 								left: 0px;
 								pointer-events: none;
