@@ -212,7 +212,9 @@
 					@include media-breakpoint-up(xl) {
 					max-width: rem(650);
 					}
+					@include media-breakpoint-up(md) {
 					max-width: rem(500);
+					}
 				}
 				@include media-breakpoint-up(xl) {
 					
