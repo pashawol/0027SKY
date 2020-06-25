@@ -1,9 +1,23 @@
 mixin sForm()
 	// start sForm
 	+b.SECTION.sForm.section#sForm&attributes(attributes)
+		#particles4-js.canvas-wrap
 		.container
-			+b.section-title.text-center
-				h2 sForm
-				
 			.row
+				+e.left-col.col-lg-6
+					+b.section-title.text-lg-left.text-center
+						h2 Подключите SKY PAY к&nbsp;своему бизнесу
+						p Приглашаем вас войти в&nbsp;будущее финансов вместе с&nbsp;SKY CRYPTO
+					+pic('bitcoin-pay1','','',0)(class="d-none d-lg-block")
+				.col
+					+form-wrap
+						.text-center
+							+e.title-top Заполните форму и&nbsp;менеджер свяжется с&nbsp;вами:
+						+input("Введите название компании",'text','Название компании:') 
+						+input("Введите ваш e-mail",'email','E-mail:') 
+						+input("Введите название компании",'select','Страна:') 
+						+input("Введите название компании",'text','Название компании:') 
+						+input("Введите веб-адрес",'text','Веб-адрес:') 
+						+polite
+						button.btn.btn-warning.btn-block(type="submit" ) Подключить SKY PAY
 	// end sForm

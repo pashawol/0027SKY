@@ -108,8 +108,8 @@ function eventHandler() {
 	JSCCommon.mobileMenu();
 	JSCCommon.inputMask(); // JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	// $(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/main.jpg);"></div>')
-	// /добавляет подложку для pixel perfect
+
+	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/2.jpg);"></div>'); // /добавляет подложку для pixel perfect
 	// /закрыть/открыть мобильное меню
 
 	function heightses() {
@@ -173,8 +173,36 @@ function eventHandler() {
 		particlesJS.load('particles-js', 'js/particles.json');
 		particlesJS.load('particles2-js', 'js/particles.json');
 		particlesJS.load('particles3-js', 'js/particles.json');
+		particlesJS.load('particles4-js', 'js/particles.json');
 	}
 
+	var sWorkingSwiper = new Swiper('.sWorkingPrinciple__slider--js', {
+		// slidesPerView: 5,
+		slidesPerView: 1,
+		spaceBetween: 20,
+		loop: true,
+		lazy: {
+			loadPrevNext: true // loadPrevNextAmount: 12,
+
+		},
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev'
+		},
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'bullets',
+			clickable: true
+		}
+	});
+	$(".headerBlock__scroll-down").click(function () {
+		var elementClick = $('.headerBlock').next();
+		var destination = $(elementClick).offset().top;
+		$('html, body').animate({
+			scrollTop: destination
+		}, 1100);
+		return false;
+	});
 	var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 
 	if (isIE11) {

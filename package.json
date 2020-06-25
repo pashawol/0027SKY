@@ -9,10 +9,10 @@
   "author": "Khalunin Pavel",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.9.6",
-    "@babel/plugin-proposal-object-rest-spread": "^7.9.6",
-    "@babel/preset-env": "^7.9.6",
-    "autoprefixer": "^9.8.0",
+    "@babel/core": "^7.10.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
+    "autoprefixer": "^9.8.4",
     "babel-core": "^6.26.3",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-polyfill": "^6.26.0",
@@ -44,7 +44,7 @@
     "gulp-svgmin": "^2.2.0",
     "gulp-tabify": "0.0.2",
     "gulp-uglify": "^3.0.2",
-    "postcss": "^7.0.30",
+    "postcss": "^7.0.32",
     "postcss-combine-media-query": "^1.0.1",
     "postcss-custom-properties": "^9.1.1",
     "postcss-extract-media-query": "^2.0.0",
@@ -69,7 +69,7 @@
     "popper.js": "^1.16.1",
     "slick-carousel": "^1.8.1",
     "svg4everybody": "^2.1.9",
-    "swiper": "^5.4.1",
+    "swiper": "^5.4.5",
     "vue": "^2.6.11",
     "wowjs": "^1.1.3"
   }

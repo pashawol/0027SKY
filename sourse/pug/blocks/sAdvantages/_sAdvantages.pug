@@ -23,3 +23,29 @@ mixin sAdvantages()
 			+icon('logo')
 			| Создать SKY-кошелек
 	// end sAdvantages
+
+	
+mixin sAdvantages2()
+	// start sAdvantages
+	+b.SECTION.sAdvantages.bg-light.section#sAdvantages&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Ключевые преимущества
+				
+			.row
+				mixin item(i,t,p)
+					+e.col.col-xl-3.col-md-6
+						+e.item--sky
+							+e.img-wrap
+								img(src=`img/svg/sAdvantages-2-${i}.svg`, alt="")
+							+e.text-wrap
+								+e.title!= t
+								+e.text!= p
+				+item('1',`Анонимность при&nbsp;использовании`,`SKY CRYPTO защищает все сделки. Платформа блокирует криптовалюту на&nbsp;счету продавца во&nbsp;время сделки`)
+				+item(`2`,`Даже если&nbsp;нет биткоина`,`Наша поддержка круглосуточно работает для вас и&nbsp;быстро поможет решить спорный вопрос`)
+				+item(`3`,`Обеспечение  <br> защиты`,`0,5% при продаже и&nbsp;1% при покупке через веб-платформу или бота`)
+				+item(`4`,`Простая <br>  интеграциян`,`Пользователи не&nbsp;платят за&nbsp;перевод криптовалюты внутри системы SKY CRYPTO`)
+	 
+		+e.btn.btn-warning(href="#") Подключить
+	// end sAdvantages
+

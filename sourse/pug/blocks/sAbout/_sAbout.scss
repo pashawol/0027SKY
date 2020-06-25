@@ -21,6 +21,17 @@
 		&__wrap{
 			max-width: rem(531);
 			position: relative;
+			&--2{
+				max-width: rem(570);
+				h2{
+					@include media-breakpoint-up(md) {
+						
+						// max-width: rem(380);
+						max-width: rem(570);
+						}
+				}
+
+			}
 		}
 		img{
 				@include media-breakpoint-up(md) {
@@ -39,8 +50,15 @@
 		}
 		&__btn{
 			@extend .btn;
-			@extend .btn-outline;
+			&:not(.btn-warning){
+
+				@extend .btn-outline;
+			}
 			width: rem(220);
+			&.btn-warning{
+				padding: rem(17) rem(15);
+				width: rem(240);
+			}
 				@include media-breakpoint-up(md) {
 
 					margin-top: rem(32);

@@ -11,6 +11,14 @@
 	background-color: #192d46;
 	position: relative;
 	z-index: 2;
+	&__scroll-down{
+		@include a-cent(x);
+		bottom: rem(40);
+		color: #ffffff;
+		cursor: pointer;
+		padding: rem(10);
+		.icon{font-size: 1rem;}
+	}
 	@include media-breakpoint-up(sm) {
 		padding-top: rem(120);
 	}
@@ -178,7 +186,83 @@ color: $body-color;
 				}
 			}
 		}
+		.container{
+			position: relative;
+		}
+		&__content{
+			// position: relative;
+			max-width: rem(530);
+			margin-left: auto;
+					@include media-breakpoint-up(lg){
+						margin-right: 0;
+						text-align: left;
+						padding-bottom: 0;
+					}
+					padding-bottom: rem(40);
+					text-align: center;
+					margin-right: auto;
+			text-align: left;
+			picture{
+				@include media-breakpoint-up(xl) {
+					
+					left: -90px;
+					margin-bottom: 0;
+				}
+				margin-bottom: 1.5rem;
+				@include media-breakpoint-up(lg) {
+					position: absolute;
 
+								left: -140px;
+								pointer-events: none;
+								@include a-cent(y);
+							}
+				// margin-right: rem(30);
+
+			}
+			h1{
+					@include media-breakpoint-up(lg) {
+
+						text-align: left;
+					}
+			}
+			p{
+					@include media-breakpoint-up(lg) {
+
+						text-align: left;
+					}
+					text-align: center;
+				color: #A8B5C6;
+				margin-bottom: rem(62);
+				@extend .h6;
+				font-weight: normal;
+			}
+
+		}
+		&__btn-wrap{
+				@include media-breakpoint-up(lg){
+
+					max-width: rem(500);
+				}
+		}
+		&__btn{
+			@extend .btn;
+			margin-bottom: 1rem;
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 240px;
+			&.btn-warning{
+				height: rem(58);
+			}
+		}
+		.btn-outline-white{
+			border: 1px solid #3C4C62;
+			// padding: rem(20) rem(15);
+			color: #ffffff;
+			&:hover{
+				background-color: #fff;
+			 color: #3C4C62;
+			}
+		}
 	@include media-breakpoint-up(lg) {}
 
 	@include media-breakpoint-up(md) {}
