@@ -116,7 +116,7 @@ mixin mnu()
 mixin mnu()
 	-
 		var nav= {
-			"Для ПК":"#",
+		 
 			"Для телефона":"#",
 			"SKY PAY":"#",
 			"Обучение":"#",
@@ -124,6 +124,9 @@ mixin mnu()
 			"Контакты":"#" 
 			}
 	+e.UL.nav(itemscope itemtype="http://schema.org/SiteNavigationElement")
+
+		//- +e.LI.item( itemprop="item" ): +e.A.link--active(href="#"  itemprop="url") Зарабатывай
+		+e.LI.item( itemprop="item" ): +e.A.link--current(href='#'  itemprop="url") Для ПК
 		each linkPatch, linkName in nav
 			+e.LI.item( itemprop="item" ): +e.A.link(href= linkPatch  itemprop="url")= linkName
 		+e.LI.item( itemprop="item" ): +e.A.link--active(href="#"  itemprop="url") Зарабатывай

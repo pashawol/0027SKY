@@ -179,11 +179,14 @@ function eventHandler() {
 	var sWorkingSwiper = new Swiper('.sWorkingPrinciple__slider--js', {
 		// slidesPerView: 5,
 		slidesPerView: 1,
-		spaceBetween: 20,
+		spaceBetween: 0,
 		loop: true,
 		lazy: {
 			loadPrevNext: true // loadPrevNextAmount: 12,
 
+		},
+		autoplay: {
+			delay: 5000
 		},
 		navigation: {
 			nextEl: '.swiper-button-next',

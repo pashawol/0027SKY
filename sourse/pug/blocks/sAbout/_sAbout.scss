@@ -1,10 +1,7 @@
 
 	// start .sAbout
 	.sAbout {
-			@include media-breakpoint-up(lg) {
-
-				padding-top: calc(var(--sPT) + #{rem(32)});
-			}
+		
 		h2{
 			padding-bottom: var(--sTPB);
 			@include media-breakpoint-up(md) {
@@ -14,10 +11,67 @@
 			text-align: center;
 
 		}
-		p{
-			margin-bottom: rem(20);
-			line-height: (28 / 16);
+			p {
+				margin-bottom: rem(20);
+				line-height: (28 / 16);
+			}
+			&--top,
+			&--footer{
+						@media (max-width: 1365.98px) and (min-width: 1200px) {
+						padding-bottom: rem(140);
+					}
+					
+						@media (max-width: 1199.98px) and (min-width: 992px) {
+						padding-bottom: rem(80);
+					}
+
+				}
+
+			&--top {
+				img{
+					max-width: rem(490);
+				}
+				h2{
+					padding-bottom: rem(30);
+				}
+				p{
+					max-width: rem(490);
+						@include media-breakpoint-up(lg) {
+					margin-bottom: rem(1);
+						}
+				}
 		}
+			&--footer {
+					img {
+						max-width: rem(490);
+					}
+				h2{
+					padding-bottom: rem(20);
+				}
+				p{
+					max-width: rem(470);
+							@include media-breakpoint-up(lg){
+
+								margin-bottom: rem(1);
+							}
+				}
+		}
+
+			@include media-breakpoint-up(lg) {
+
+				padding-top: calc(var(--sPT) + #{rem(32)});
+
+				&--top {
+					padding-top: calc(var(--sPT) + #{rem(52)});
+					padding-bottom: calc(var(--sPB) + #{rem(7)});
+					
+				}
+				&--footer{
+					padding-bottom: calc(var(--sPB) - #{rem(10)});
+
+					}
+			}
+	
 		&__wrap{
 			max-width: rem(531);
 			position: relative;
@@ -48,6 +102,37 @@
 				}
 			top: rem(-40);
 		}
+
+		&--top {
+			img {
+				@include media-breakpoint-up(xl) {
+		 
+					margin-left: rem(85);
+				}
+				
+				@include media-breakpoint-up(lg) {
+		 
+					margin-left: rem(85);
+				}
+
+
+			}
+		}
+		
+
+		&--footer {
+			img {
+				@include media-breakpoint-up(xl) { 
+					margin-left: rem(80);
+					margin-top: rem(15);
+				}
+					@include media-breakpoint-up(lg) {
+
+						margin-left: rem(85);
+					}
+			}
+		}
+
 		&__btn{
 			@extend .btn;
 			&:not(.btn-warning){
@@ -56,12 +141,12 @@
 			}
 			width: rem(220);
 			&.btn-warning{
-				padding: rem(17) rem(15);
+				padding: rem(13) rem(15);
 				width: rem(240);
 			}
 				@include media-breakpoint-up(md) {
 
-					margin-top: rem(32);
+					margin-top: rem(35);
 					margin-bottom: rem(34);
 				}
 				margin-bottom: rem(10);
@@ -71,7 +156,7 @@
 			}
 		}
 
-
+		 
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
@@ -99,6 +184,9 @@
 		&__wrap{
 			margin-left: auto;
 			margin-right: auto;
+		}
+		img{
+			margin-bottom: 2rem;
 		}
 	}
 	@include media-breakpoint-down(xs) {} 

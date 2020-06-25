@@ -40,7 +40,7 @@
 								</div>
 								<div class="col d-none d-xl-block">
 									<ul class="top-nav__nav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-										<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">Для ПК</a>
+										<li class="top-nav__item" itemprop="item"><a class="top-nav__link top-nav__link--current" href="#" itemprop="url">Для ПК</a>
 										</li>
 										<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">Для телефона</a>
 										</li>
@@ -84,7 +84,7 @@
 							<div class="menu-mobile__inner">
 								<div class="canvas-wrap" id="particles3-js"></div>
 								<ul class="menu-mobile__nav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-									<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Для ПК</a>
+									<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link menu-mobile__link--current" href="#" itemprop="url">Для ПК</a>
 									</li>
 									<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Для телефона</a>
 									</li>
@@ -149,11 +149,11 @@
 			</div>
 			<!-- end headerBlock-->
 			<!-- start sAbout-->
-			<section class="sAbout section" id="sAbout">
+			<section class="sAbout sAbout--top section" id="sAbout">
 				<div class="container">
 					<div class="sAbout__wrap sAbout__wrap--2">
-						<h2>Почему онлайн-бизнес выбирает SKY PAY?</h2><img class="res-i" src="img/svg/about-img2.svg" alt=""/>
-						<p>SKY CRYPTO постоянно растет и&nbsp;совершенствуется с&nbsp;главной целью&nbsp;&mdash; облегчить процесс транзакций электронной торговли. Мы&nbsp;всегда рады помочь нашим клиентам в&nbsp;любых вопросах, которые у&nbsp;них есть.</p><a class="sAbout__btn" href="#">Смотреть демо</a>
+						<h2>Почему онлайн-бизнес выбирает SKY PAY?</h2>
+						<p>SKY CRYPTO постоянно растет и&nbsp;совершенствуется с&nbsp;главной целью&nbsp;&mdash; облегчить процесс транзакций электронной торговли. Мы&nbsp;всегда рады помочь нашим клиентам в&nbsp;любых вопросах, которые у&nbsp;них есть.</p><img class="res-i" src="img/svg/about-img2.svg" alt=""/><a class="sAbout__btn" href="#">Смотреть демо</a>
 					</div>
 				</div>
 			</section>
@@ -165,7 +165,7 @@
 						<h2>Ключевые преимущества</h2>
 					</div>
 					<div class="row">
-								<div class="sAdvantages__col col-xl-3 col-md-6">
+								<div class="sAdvantages__col col-xl-3 col-sm-6">
 									<div class="sAdvantages__item sAdvantages__item--sky">
 										<div class="sAdvantages__img-wrap"><img src="img/svg/sAdvantages-2-1.svg" alt=""/>
 										</div>
@@ -177,7 +177,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="sAdvantages__col col-xl-3 col-md-6">
+								<div class="sAdvantages__col col-xl-3 col-sm-6">
 									<div class="sAdvantages__item sAdvantages__item--sky">
 										<div class="sAdvantages__img-wrap"><img src="img/svg/sAdvantages-2-2.svg" alt=""/>
 										</div>
@@ -189,7 +189,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="sAdvantages__col col-xl-3 col-md-6">
+								<div class="sAdvantages__col col-xl-3 col-sm-6">
 									<div class="sAdvantages__item sAdvantages__item--sky">
 										<div class="sAdvantages__img-wrap"><img src="img/svg/sAdvantages-2-3.svg" alt=""/>
 										</div>
@@ -201,7 +201,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="sAdvantages__col col-xl-3 col-md-6">
+								<div class="sAdvantages__col col-xl-3 col-sm-6">
 									<div class="sAdvantages__item sAdvantages__item--sky">
 										<div class="sAdvantages__img-wrap"><img src="img/svg/sAdvantages-2-4.svg" alt=""/>
 										</div>
@@ -221,7 +221,7 @@
 			<section class="sWorkingPrinciple section" id="sWorkingPrinciple">
 				<div class="container">
 					<div class="section-title text-center">
-						<h2>Принцип работы SKY PAY</h2>
+						<h2>Принцип работы SKY&nbsp;PAY</h2>
 						<p>SKY CRYPTO защищает все сделки. Платформа блокирует криптовалюту на&nbsp;счету продавца во&nbsp;время сделки&nbsp;&mdash; текст про то&nbsp;как все просто</p>
 					</div>
 					<div class="sWorkingPrinciple__slider-wrapper">
@@ -230,16 +230,18 @@
 								<div class="sWorkingPrinciple__slide swiper-slide">
 									<div class="row">
 										<div class="col">
-											<div class="sWorkingPrinciple__step">1 шаг
+											<div class="sWorkingPrinciple__content">
+												<div class="sWorkingPrinciple__step">1 шаг
+												</div>
+												<div class="sWorkingPrinciple__title">Покупатель выбирает способ оплаты и&nbsp;вводит e-mail для получения чека
+												</div>
+												<p>Мелкий текст с&nbsp;небольшим описанием, если есть такая необходимость в&nbsp;его использовании.</p>
 											</div>
-											<div class="sWorkingPrinciple__title">Покупатель выбирает способ оплаты и&nbsp;вводит e-mail для получения чека
-											</div>
-											<p>Мелкий текст с&nbsp;небольшим описанием, если есть такая необходимость в&nbsp;его использовании.</p>
 										</div>
-										<div class="col-md-6 order-md-first">
+										<div class="col-md-6 order-md-first text-lg-right">
 											<!-- picture-->
 											<picture> 
-												<source srcset="img/webp/2/screen.webp" type="image/webp"/><img src="img/png/2/screen.jpg" alt=""/>
+												<source srcset="img/webp/2/screen.webp" type="image/webp"/><img src="img/png/2/screen.png" alt=""/>
 											</picture>
 											<!-- /picture-->
 										</div>
@@ -248,16 +250,18 @@
 								<div class="sWorkingPrinciple__slide swiper-slide">
 									<div class="row">
 										<div class="col">
-											<div class="sWorkingPrinciple__step">1 шаг
+											<div class="sWorkingPrinciple__content">
+												<div class="sWorkingPrinciple__step">1 шаг
+												</div>
+												<div class="sWorkingPrinciple__title">Покупатель выбирает способ оплаты и&nbsp;вводит e-mail для получения чека
+												</div>
+												<p>Мелкий текст с&nbsp;небольшим описанием, если есть такая необходимость в&nbsp;его использовании.</p>
 											</div>
-											<div class="sWorkingPrinciple__title">Покупатель выбирает способ оплаты и&nbsp;вводит e-mail для получения чека
-											</div>
-											<p>Мелкий текст с&nbsp;небольшим описанием, если есть такая необходимость в&nbsp;его использовании.</p>
 										</div>
-										<div class="col-md-6 order-md-first">
+										<div class="col-md-6 order-md-first text-lg-right">
 											<!-- picture-->
 											<picture> 
-												<source srcset="img/webp/2/screen.webp" type="image/webp"/><img src="img/png/2/screen.jpg" alt=""/>
+												<source srcset="img/webp/2/screen.webp" type="image/webp"/><img src="img/png/2/screen.png" alt=""/>
 											</picture>
 											<!-- /picture-->
 										</div>
@@ -266,16 +270,18 @@
 								<div class="sWorkingPrinciple__slide swiper-slide">
 									<div class="row">
 										<div class="col">
-											<div class="sWorkingPrinciple__step">1 шаг
+											<div class="sWorkingPrinciple__content">
+												<div class="sWorkingPrinciple__step">1 шаг
+												</div>
+												<div class="sWorkingPrinciple__title">Покупатель выбирает способ оплаты и&nbsp;вводит e-mail для получения чека
+												</div>
+												<p>Мелкий текст с&nbsp;небольшим описанием, если есть такая необходимость в&nbsp;его использовании.</p>
 											</div>
-											<div class="sWorkingPrinciple__title">Покупатель выбирает способ оплаты и&nbsp;вводит e-mail для получения чека
-											</div>
-											<p>Мелкий текст с&nbsp;небольшим описанием, если есть такая необходимость в&nbsp;его использовании.</p>
 										</div>
-										<div class="col-md-6 order-md-first">
+										<div class="col-md-6 order-md-first text-lg-right">
 											<!-- picture-->
 											<picture> 
-												<source srcset="img/webp/2/screen.webp" type="image/webp"/><img src="img/png/2/screen.jpg" alt=""/>
+												<source srcset="img/webp/2/screen.webp" type="image/webp"/><img src="img/png/2/screen.png" alt=""/>
 											</picture>
 											<!-- /picture-->
 										</div>
@@ -283,9 +289,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="d-md-none">
-							<div class="swiper-pagination"></div>
-						</div>
+						<div class="swiper-pagination"></div>
 						<div class="d-none d-md-block">
 							<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev"> </div>
 							<div class="swiper-button-hand swiper-button-hand-next swiper-button-next"> </div>
@@ -295,11 +299,11 @@
 			</section>
 			<!-- end sWorkingPrinciple-->
 			<!-- start sAbout-->
-			<section class="sAbout section bg-light" id="sAbout">
+			<section class="sAbout sAbout--footer section bg-light" id="sAbout">
 				<div class="container">
 					<div class="sAbout__wrap sAbout__wrap--2">
-						<h2>Без комиссий сети и&nbsp;подтверждения сделок</h2><img class="res-i" src="img/svg/about-img2-2.svg" alt=""/>
-						<p>Для конечного пользователя все происходит максимально комфортно, быстро и&nbsp;бесплатно.</p><a class="sAbout__btn btn-warning" href="#">Подключить</a>
+						<h2>Без комиссий сети и&nbsp;подтверждения сделок</h2>
+						<p>Для конечного пользователя все происходит максимально комфортно, быстро и&nbsp;бесплатно.</p><img class="res-i" src="img/svg/about-img2-2.svg" alt=""/><a class="sAbout__btn btn-warning" href="#">Подключить</a>
 					</div>
 				</div>
 			</section>
@@ -316,7 +320,7 @@
 							</div>
 							<!-- picture-->
 							<picture class="d-none d-lg-block"> 
-								<source srcset="img/webp/2/bitcoin-pay1.webp" type="image/webp"/><img src="img/png/2/bitcoin-pay1.jpg" alt=""/>
+								<source srcset="img/webp/2/bitcoin-pay1.webp" type="image/webp"/><img src="img/png/2/bitcoin-pay1.png" alt=""/>
 							</picture>
 							<!-- /picture-->
 						</div>
@@ -339,27 +343,24 @@
 									</div>
 									<!-- +e.input-wrap-->
 									<div class="form-wrap__input-wrap form-group">
-										<label><span class="form-wrap__title">E-mail:</span><input class="form-wrap__input form-control" type="email" placeholder="Введите ваш e-mail" name="email"/> 
+										<label><span class="form-wrap__title">E-mail:</span><input class="form-wrap__input form-control" type="email" placeholder="Введите  e-mail" name="email"/> 
 										</label> 
 									</div>
 									<!-- +e.input-wrap-->
-									<div class="form-wrap__input-wrap form-group">
-										<label><span class="form-wrap__title">Страна:</span>
-											<select class="form-wrap__input form-control" name="select">
-												<option value="Введите название компании">Введите название компании</option>
-												<option value=" placeholder 1">Введите название компании 1</option>
-												<option value=" placeholder 2">Введите название компании 2</option>
-												<option value=" placeholder 3">Введите название компании 3</option>
-												<option value=" placeholder 4">Введите название компании 4</option>
-											</select> 
-										</label> 
+									<div class="custom-select-wrap">
+										<select class="custom-select-js form-control">
+											<option value="" selected="selected" disabled="disabled">Выберите страну вашего бизнеса</option>
+											<option value="Россия ">Россия </option>
+											<option value="Беларусь">Беларусь</option>
+											<option value="Украина">Украина</option>
+											<option value="Россия ">Россия </option>
+											<option value="Беларусь">Беларусь</option>
+											<option value="Украина">Украина</option>
+											<option value="Россия ">Россия </option>
+											<option value="Беларусь">Беларусь</option>
+											<option value="Украина">Украина</option>
+										</select>
 									</div>
-									<!-- +e.input-wrap-->
-									<div class="form-wrap__input-wrap form-group">
-										<label><span class="form-wrap__title">Название компании:</span><input class="form-wrap__input form-control" type="text" placeholder="Введите название компании" name="text"/> 
-										</label> 
-									</div>
-									<!-- +e.input-wrap-->
 									<div class="form-wrap__input-wrap form-group">
 										<label><span class="form-wrap__title">Веб-адрес:</span><input class="form-wrap__input form-control" type="text" placeholder="Введите веб-адрес" name="text"/> 
 										</label> 

@@ -27,13 +27,23 @@
 			color: $body-color;
 		}
 	}
-	.top-nav__link--active{
+	.top-nav__link--current{
 		color: $primary !important;
 		border-bottom: 1px solid currentColor;
 		&:hover{
 			border-color: transparent;
 		}
 	}
+	
+	.top-nav__link--active{
+		color: $warning !important;
+		border-bottom: 1px solid currentColor;
+		&:hover{
+			color: $warning !important;
+			border-color: transparent;
+		}
+	}
+
 	&.fixed {
 		padding-top: rem(15);
 		padding-bottom: rem(15);

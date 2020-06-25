@@ -8,15 +8,33 @@ mixin sForm()
 					+b.section-title.text-lg-left.text-center
 						h2 Подключите SKY PAY к&nbsp;своему бизнесу
 						p Приглашаем вас войти в&nbsp;будущее финансов вместе с&nbsp;SKY CRYPTO
-					+pic('bitcoin-pay1','','',0)(class="d-none d-lg-block")
+					//- div
+					//- 	img(src="img/png/2/bitcoin-pay1.png", alt="")
+					+pic('bitcoin-pay1.png','','',0)(class="d-none d-lg-block")
 				.col
 					+form-wrap
+						mixin option(p)
+							option(value= p )&attributes(attributes)= p
 						.text-center
 							+e.title-top Заполните форму и&nbsp;менеджер свяжется с&nbsp;вами:
 						+input("Введите название компании",'text','Название компании:') 
-						+input("Введите ваш e-mail",'email','E-mail:') 
-						+input("Введите название компании",'select','Страна:') 
-						+input("Введите название компании",'text','Название компании:') 
+						+input("Введите  e-mail",'email','E-mail:') 
+						//- +input("Выберите страну вашего бизнеса",'select','Страна:')  
+						+b.custom-select-wrap
+							select.custom-select-js.form-control
+								option(value="" selected disabled) Выберите страну вашего бизнеса
+								+option("Россия ") 
+								+option("Беларусь") 
+								+option("Украина") 
+						
+								+option("Россия ") 
+								+option("Беларусь") 
+								+option("Украина") 
+						
+								+option("Россия ") 
+								+option("Беларусь") 
+								+option("Украина") 
+					 
 						+input("Введите веб-адрес",'text','Веб-адрес:') 
 						+polite
 						button.btn.btn-warning.btn-block(type="submit" ) Подключить SKY PAY

@@ -182,14 +182,27 @@ background-color: #ffffff;
 					color: $primary;
 					border-color:$primary;
 				}
-				&--active{
-					color: $primary !important;
-					border-color:$primary;
-					&:hover{
-						border-color: transparent;
+
+ 
+
+					&--current {
+						color: $primary !important;
+						border-bottom: 1px solid currentColor;
+
+						&:hover {
+							border-color: transparent;
+						}
 					}
-					
-				}
+
+					&--active {
+						color: $warning !important;
+						border-bottom: 1px solid currentColor;
+
+						&:hover {
+							color: $warning !important;
+							border-color: transparent;
+						}
+					}
 			}
 	&__footer{
 		padding-bottom: 5vh;

@@ -9,7 +9,7 @@
 		}
 		&__col{
 
-			margin-bottom: 20px;
+			margin-bottom: rem(20px);
 		}
 		&__item{
 			border-radius: 10px;
@@ -27,13 +27,21 @@
 				min-height: rem(366);
 			}
 			padding: rem(45) rem(20);
-			&--sky{
-				padding-left: 0 !important;
-				padding-right: 0 !important;
-			}
+			padding-bottom: rem(10);
+				&--sky{
+					 padding: 0 !important;
+					box-shadow: none !important;
+					min-height: 1px !important;
+					margin-bottom: rem(10);
+				 
+				}
 		}
 		
-			 
+			 &__item--sky {
+				 margin-left: auto;
+				 margin-right: auto;
+				 max-width: rem(300);
+			 }
 		&__img-wrap{
 			margin-left: auto;
 			margin-right: auto;
@@ -126,7 +134,7 @@
 			@extend .btn;
 			&.btn-warning{
 				max-width: rem(240);
-					padding: rem(17) rem(15);
+					padding: rem(12) rem(15);
 			}
 			&:not(.btn-warning){
 

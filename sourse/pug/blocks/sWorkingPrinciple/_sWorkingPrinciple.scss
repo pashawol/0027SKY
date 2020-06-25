@@ -4,14 +4,21 @@
 		--swiper-navigation-size: #{rem(30)};
 		.swiper-button-hand{
 			color: $primary;
+			height: 30px;
+			// margin-bottom: rem(20);
+			top: 47.5%;
+		}
+		.section-title{
+			padding-bottom: calc(var(--sTPB) - #{rem(35)});
 		}
 		text-align: center;
 		.swiper-pagination{
 			 bottom: 0;
 			 position: relative;
 			 margin-bottom: 2rem;
+			 text-align: center;
 		}
-		.swiper-pagination,
+	 
 		.swiper-container,
 		.col{
 	 
@@ -45,9 +52,13 @@
 	 
 		}
 		&__slide{
+				@include media-breakpoint-up(xl) {
+
+					padding: rem(30) rem(50) rem(60);
+				}
 				@include media-breakpoint-up(md) {
 
-					padding: rem(30) rem(60) rem(60);
+					padding: rem(30) rem(50) rem(60);
 				}
 					@include media-breakpoint-up(sm) {
 
@@ -57,16 +68,20 @@
 			.row{
 					@include media-breakpoint-up(lg) {
 
-						@include roww(30);
+						// @include roww(30);
 					}
 			}
 			p{
 				@extend .text-secondary;
+				line-height: (28 / 16 );
 				max-width: rem(400);
+			
 				@include media-breakpoint-up(md) {
 					margin-left: 0;
 					margin-right: 0;
+					margin-bottom: 1rem;
 				}
+				margin-bottom: 2rem;
 
 				margin-left: auto;
 				margin-right: auto;
@@ -82,15 +97,20 @@
 			&__step{
 				color: $warning;
 				@extend .h6;
-				margin-bottom: rem(30);
+					@include media-breakpoint-up(md){
+
+						margin-bottom: rem(35);
+					}
+					margin-bottom: rem(20);
 			}
 			&__title{
 				@extend .h5;
 				font-weight: bold;
-				margin-bottom: rem(25);
 				max-width: rem(460);
 				line-height: (33 / 26);
-					@include media-breakpoint-up(md){
+				margin-bottom: rem(20);
+				@include media-breakpoint-up(md){
+					margin-bottom: rem(30);
 						margin-left: 0;
 						margin-right: 0;
 					}
@@ -104,6 +124,14 @@
 				@extend .btn;
 				@extend .btn-block;
 				width: rem(260);
+			}
+
+
+			&__content{
+					@include media-breakpoint-up(xl) {
+						margin-left: rem(30);
+						padding-bottom: rem(40);
+					}
 			}
 		 
 	@include media-breakpoint-up(xl) {}
