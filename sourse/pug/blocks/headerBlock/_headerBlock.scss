@@ -341,10 +341,14 @@
 					@extend .h6;
 					text-decoration: none !important;
 					margin-bottom: 10px;
-					&--active,
 					&:hover{
-						background-color: $primary;
-						border-color:$primary;
+							background-color: #fff;
+							border-color:#fff;
+							color:#3c4c62 !important;
+					}
+					&--active {
+						background-color: $primary !important;
+						border-color:$primary !important;
 					}
 				}
 				textarea{
@@ -401,6 +405,9 @@
 	}
 				padding-top: rem(120) !important; 
 
+				a{
+					text-decoration: none !important;
+				}
 	@include media-breakpoint-up(lg) {}
 
 	@include media-breakpoint-up(md) {}
