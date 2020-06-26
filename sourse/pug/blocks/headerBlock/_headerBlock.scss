@@ -341,14 +341,18 @@
 					@extend .h6;
 					text-decoration: none !important;
 					margin-bottom: 10px;
-					&:hover{
-							background-color: #fff;
-							border-color:#fff;
-							color:#3c4c62 !important;
+					&:not(.headerBlock__link-btn--active):hover {
+							@include media-breakpoint-up(xs) {
+								background-color: #fff;
+								border-color:#fff;
+								
+								color:#3c4c62 !important;
+							}
 					}
 					&--active {
 						background-color: $primary !important;
 						border-color:$primary !important;
+						color: #ffffff !important;
 					}
 				}
 				textarea{
@@ -401,6 +405,9 @@
 		// padding-top: rem(70);
 		p{
 			padding-bottom: rem(20);
+				margin-bottom: rem(30);
+				padding-top: rem(5);
+				color: #A8B5C6;
 		}
 	}
 				padding-top: rem(120) !important; 

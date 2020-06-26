@@ -484,6 +484,10 @@ iframe {
 	&:hover{
 		background: #FFA318;
 		border-color: #FFA318;
+		@include media-breakpoint-down(xs) {
+			
+			
+		}
 	}
 	&:focus{
 			background: #FFA318 !important;
