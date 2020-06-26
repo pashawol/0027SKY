@@ -83,6 +83,7 @@
 	}
 	.form-wrap{
 	 color: $body-color;
+	 text-align: left;
 	
 	}
 	&__title{
@@ -291,6 +292,115 @@
 			 color: #3C4C62;
 			}
 		}
+				&--minh1 {
+					min-height: 1px !important;
+					padding-bottom: calc(var(--sPB) - #{rem(20)});
+					h1{
+						@include media-breakpoint-up(sm) {
+							margin-bottom: rem(30);
+							padding-top: rem(5);
+
+								// font-size: $h1-font-size;
+								// font-size: 52px;
+							}
+					}
+					p{
+						margin-bottom: rem(30);
+					}
+				}
+				&--btn{
+					color: #a8b5c6;
+					@extend .h6;
+					font-weight: normal;
+					line-height: $line-height-base;
+				}
+				&__link-btn-wrap{
+					@include media-breakpoint-up(md) {
+
+						justify-content: center;
+						// align-items: center;
+						display: flex;
+						flex-wrap: wrap;
+						margin-left: rem(-9);
+						margin-right: rem(-9);
+					}
+				}
+				&__link-btn{
+					min-width: rem(150);
+						@include media-breakpoint-up(md) {
+
+							margin-left: rem(9);
+							margin-right: rem(9);
+						}
+					border-radius: $border-radius;
+					border: 2px solid #3c4c62;
+					display: block;
+					text-align: center;
+					padding: rem(17) rem(30);
+					color: #ffffff 	!important;
+					@extend .h6;
+					text-decoration: none !important;
+					margin-bottom: 10px;
+					&--active,
+					&:hover{
+						background-color: $primary;
+						border-color:$primary;
+					}
+				}
+				textarea{
+					min-width: rem(120);
+				}
+				&__contact-wrap{
+					margin-bottom: 30px;
+					@include media-breakpoint-up(xl) {
+						margin-left: rem(10);
+						margin-bottom: 0;
+						}
+							@include media-breakpoint-up(md) {
+
+							background: #FFFFFF;
+							box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+							border-radius: 10px;
+							padding: rem(24) rem(44);
+						}
+					font-size: 1rem;
+				}
+				&__group{
+					font-size: 1rem;
+					// margin-bottom: rem(45);
+					padding-bottom: rem(25);
+				}
+				&__group-title{
+					font-weight: 500;
+					margin-bottom: rem(15);
+				}
+				&__group-link{
+					display: inline-flex;
+					align-items: center;
+					color: #ffffff !important;	
+					// font-size: rem(26);
+					margin-bottom: 0;
+					font-weight: normal;
+					@extend .h5;
+				}
+				&__icon-wrap{
+					width: rem(35);
+					height: rem(35);
+					border-radius: 50%;
+					flex: 0 0 rem(35);
+					margin-right: rem(10);
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+	&__contact{
+		// padding-top: rem(70);
+		p{
+			padding-bottom: rem(20);
+		}
+	}
+				padding-top: rem(120) !important; 
+
 	@include media-breakpoint-up(lg) {}
 
 	@include media-breakpoint-up(md) {}

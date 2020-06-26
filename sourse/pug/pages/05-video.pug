@@ -1,0 +1,31 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug 
+include ../blocks/sAdvantages/_sAdvantages.pug 
+include ../blocks/sWork/_sWork.pug 
+include ../blocks/sAbout/_sAbout.pug 
+include ../blocks/sBlog/_sBlog.pug 
+include ../blocks/sUsers/_sUsers.pug 
+include ../blocks/sWorkingPrinciple/_sWorkingPrinciple.pug 
+include ../blocks/s-articals/_s-articals.pug 
+
+block variables
+	- let  mainPage= 'page-main'
+block title
+	- let  title= 'Обучающие видео-уроки'
+	title= title
+block pagecontent 
+	//- +mob-mnu()
+	+header()
+		+top-nav()
+	//- 	+topLine()
+	+headerBlock-3()
+		h1.text-center Обучающие <br class="d-md-none"> видео&ndash;уроки
+		p.text-center Обучающие видео-уроки по&nbsp;работе с&nbsp;платформой и&nbsp;ботом SKY CRYPTO
+		+e.link-btn-wrap
+			+e.link-btn--active(href="#") Для телефона
+			+e.link-btn(href="#") Для ПК
+	+s-articals
+	+footer()

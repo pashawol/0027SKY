@@ -102,3 +102,24 @@ mixin headerBlock2()
 		
 	// end headerBlock
 
+mixin headerBlock-3()
+	// start headerBlock
+	+b.headerBlock--btn.--minh1.section#headerBlock&attributes(attributes)
+		#particles-js.canvas-wrap 
+		+e.center
+			.container 
+				if block
+					block
+				else
+					h1.text-center Вопросы и&nbsp;ответы
+					p.text-center Часто задаваемые вопросы и&nbsp;ответы на&nbsp;них 
+					+e.link-btn-wrap
+						+e.link-btn--active(href="#") SKY-кошелек
+						+e.link-btn(href="#") Трейдинг
+						+e.link-btn(href="#") Безопасность
+						+e.link-btn(href="#") Комиссии
+						+e.link-btn(href="#") SKY PAY
+		
+	// end headerBlock
+
+

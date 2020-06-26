@@ -1,0 +1,23 @@
+mixin s-contentLogo()
+	// start s-contentLogo
+	+b.SECTION.s-contentLogo.section#s-contentLogo&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Компания SKY&nbsp;CRYPTO
+			p Сервис SKY PAY позволяет интернет-магазинам принимать оплату в&nbsp;биткоинах и&nbsp;эфириуме. Все предельно просто: покупатель выбирает удобный способ оплаты и&nbsp;переводит деньги продавцу, которые перечисляет биткоины на&nbsp;кошелек интернет-магазина. 
+
+			p Подключайте SKY PAY и&nbsp;принимайте оплату в&nbsp;криптовалюте. Мы&nbsp;позаботимся о&nbsp;том, чтобы вам было комфортно и&nbsp;выгодно. Покупатель платит рублями более 10&nbsp;способами, а&nbsp;магазин получает криптовалюту&nbsp;&mdash; биткоин или эфириум.
+			+e.lg Актуальный логотип SKY&nbsp;CRYPTO для скачивания:
+			.row
+				mixin item(i)
+					+e.col.col-lg-4
+						+e.item
+							+e.logo-wrap
+								img(src=`img/svg/${i}`, alt="")
+							+e.links
+								+e.link(href="#") Скачать SVG
+								+e.link(href="#") Скачать PNG
+				+item('logo-1.svg')
+				+item('logo-2.svg')
+				+item('logo.svg')
+	// end s-contentLogo

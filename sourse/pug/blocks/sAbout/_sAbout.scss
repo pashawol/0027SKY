@@ -189,6 +189,10 @@
 			margin-bottom: 2rem;
 		}
 	}
-	@include media-breakpoint-down(xs) {} 
+	@include media-breakpoint-down(xs) {
+		img{
+			max-width: 100%;
+		}
+	} 
 
 } // end.sAbout
