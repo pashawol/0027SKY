@@ -88,15 +88,18 @@ mixin headerBlock2()
 		+e.center
 			.container
 				+e.content
-					h1 Платежное решение для роста вашего бизнеса
-					+pic('head-img.png')
-					p Подключите прием криптовалюты за&nbsp;ваши товары и&nbsp;принимайте оплату в&nbsp;Bitcoin (BTC)
-					+e.btn-wrap
-						.row
-							.col-sm-6
-								+e.btn.btn-warning.btn-block(href="#") Подключить
-							.col-sm-6
-								+e.btn.btn-outline-white.btn-block(href="#") Смотреть демо
+					if block
+						block
+					else
+						h1 Платежное решение для роста вашего бизнеса
+						+pic('head-img.png')
+						p Подключите прием криптовалюты за&nbsp;ваши товары и&nbsp;принимайте оплату в&nbsp;Bitcoin (BTC)
+						+e.btn-wrap
+							.row
+								.col-sm-6
+									+e.btn.btn-warning.btn-block(href="#") Подключить
+								.col-sm-6
+									+e.btn.btn-outline-white.btn-block(href="#") Смотреть демо
 		+e.scroll-down
 			+icon('chevron-down')
 		

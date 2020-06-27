@@ -1,0 +1,40 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug 
+include ../blocks/sAdvantages/_sAdvantages.pug 
+include ../blocks/sWork/_sWork.pug 
+include ../blocks/sAbout/_sAbout.pug 
+include ../blocks/sBlog/_sBlog.pug 
+include ../blocks/sUsers/_sUsers.pug 
+include ../blocks/sWorkingPrinciple/_sWorkingPrinciple.pug 
+include ../blocks/sPromo/_sPromo.pug 
+
+block variables
+	- let  mainPage= 'page-main'
+block title
+	- let  title= 'Зарабатывай с SKY CRYPTO'
+	title= title
+block pagecontent 
+	//- +mob-mnu()
+	+header()
+		+top-nav()
+	//- 	+topLine()
+	+headerBlock2()
+		h1 Зарабатывай с&nbsp;SKY&nbsp;CRYPTO
+		+pic('head-img-ref.png')
+		p Получайте&nbsp;80% с&nbsp;покупок ваших рефералов
+		+e.btn-wrap
+			.row
+				.col-sm-7
+					+e.btn.btn-warning.btn-block(href="#") Зарегистрироваться
+	+sAbout6
+	//- +sAdvantages2
+	//- +sWorkingPrinciple
+	//- +sAbout6
+	+sPromo
+	//- +sWork
+	//- +sBlog
+	+sUsers
+	+footer()
