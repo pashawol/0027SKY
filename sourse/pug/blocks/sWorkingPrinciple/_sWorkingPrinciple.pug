@@ -24,3 +24,33 @@ mixin sWorkingPrinciple()
 					+arrow()
 			+e.btn.btn-outline(href="#") Открыть презентацию
 	// end sWorkingPrinciple
+
+
+mixin sWorkingPrinciple7()
+	// start sWorkingPrinciple
+	+b.SECTION.sWorkingPrinciple.section.bg-light#sWorkingPrinciple&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Этапы сделки
+				p SKY&nbsp;CRYPTO защищает все сделки. Платформа блокирует криптовалюту на&nbsp;счету продавца во&nbsp;время сделки&nbsp;&mdash; текст про то&nbsp;как все просто
+			+e.slider-wrapper
+				+e.slider--js.swiper-container
+					.swiper-wrapper
+						- for (var x = 0; x < 3; x++)
+							+e.slide.swiper-slide
+								.row
+									.col
+										+e.content
+											+e.step 1 шаг
+											+e.title Покупатель выбирает способ оплаты и&nbsp;вводит e-mail для получения чека
+											p Мелкий текст с&nbsp;небольшим описанием, если есть такая необходимость в&nbsp;его использовании.
+											//- .swiper-pagination
+									.col-md-6.order-md-first.text-lg-right
+										+pic('step.png','','',0)
+				.swiper-pagination
+				.d-none.d-md-block
+					+arrow()
+			//- +e.btn.btn-outline(href="#") Открыть презентацию
+	// end sWorkingPrinciple
+
+

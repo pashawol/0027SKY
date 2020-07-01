@@ -49,3 +49,50 @@ mixin sAdvantages2()
 		+e.btn.btn-warning(href="#") Подключить
 	// end sAdvantages
 
+
+mixin sAdvantages7()
+	// start sAdvantages
+	+b.SECTION.sAdvantages.section#sAdvantages&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Возможности P2P-обменника
+			.row
+				mixin item(i,t,p)
+					+e.col.col-xl-3.col-sm-6
+						+e.item--sky
+							+e.img-wrap
+								img(src=`img/svg/sAdvantages-7-${i}.svg`, alt="")
+							+e.text-wrap
+								+e.title!= t
+								+e.text!= p
+				+item('1',`Скорость <br> обработки`,`Самая быстрая скорость обработки заявок, среднее время закрытия сделки&nbsp;&mdash; 6&nbsp;минут`)
+				+item(`2`,`Отсутствие лимитов и&nbsp;регистрации`,`Поиск встречных заявок по&nbsp;выбранным параметрам &mdash; создавайте сделки без минимального лимита и&nbsp;регистрации`)
+				+item(`3`,`Оценка <br>  контрагента`,`Возможность оценить степень надежности контрагента&nbsp;&mdash; вы&nbsp;видите сколько дней контрагент в&nbsp;сервисе и&nbsp;какое количество положительных сделок он&nbsp;провел`)
+				+item(`4`,`Удобный фильтр заявок`,`Фильтрация предложений по&nbsp;параметрам&nbsp;&mdash; указывайте удобный для вас способ оплаты и&nbsp;необходимую сумму в&nbsp;рублях или криптовалюте`)
+	 
+		+e.btn.btn-warning(href="#") Зарегистрироваться
+	// end sAdvantages
+mixin sAdvantages8()
+	// start sAdvantages
+	+b.SECTION.sAdvantages--phone.section#sAdvantages&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Преимущества использования SKY-бота
+			.row
+				mixin item(i,t,p)
+					+e.col.col-xl-3.col-sm-6
+						+e.item--sky
+							+e.img-wrap
+								img(src=`img/svg/sAdvantages-8-${i}.svg`, alt="")
+							+e.text-wrap
+								+e.title!= t
+								+e.text!= p
+				+item('1',`Удобен <br> в использовании`,`Моментальное реагирование SKY-бота на&nbsp;ваши действия`)
+				+item(`2`,`Переводы внутри Telegram`,`Отправляйте криптовалюту любому пользователю Telegram`)
+				+item(`3`,`Моментальная <br> покупка`,`Завести кошелек в&nbsp;SKY-боте не&nbsp;займет более 5&nbsp;минут`)
+				+item(`4`,`Защита каждой <br> стороны сделки`,`Продавайте или покупайте криптовалюту&nbsp;&mdash; SKY-бот проконтролирует чистоту сделки`)
+	 
+		+e.btn.btn-primary(href="#") 
+			+icon("telegram")
+			| Перейти в SKY-бот
+	// end sAdvantages

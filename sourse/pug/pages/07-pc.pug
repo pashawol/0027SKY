@@ -1,0 +1,38 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug 
+include ../blocks/sAdvantages/_sAdvantages.pug 
+include ../blocks/sWork/_sWork.pug 
+include ../blocks/sAbout/_sAbout.pug 
+include ../blocks/sBlog/_sBlog.pug 
+include ../blocks/sUsers/_sUsers.pug 
+include ../blocks/sWorkingPrinciple/_sWorkingPrinciple.pug 
+include ../blocks/sPromo/_sPromo.pug 
+
+block variables
+	- let  mainPage= 'page-main'
+block title
+	- let  title= '7. For PC'
+	title= title
+block pagecontent 
+	//- +mob-mnu()
+	+header()
+		+top-nav()
+	//- 	+topLine()
+	+headerBlock2()(class="headerBlock--for")
+		h1 SKY-платформа для&nbsp;ПК
+		+e.label С&nbsp;расширенными возможностями
+		+pic('head-pc.png')
+		p Совершайте переводы, торгуйте, храните и&nbsp;обменивайте Bitcoin и&nbsp;другие криптовалюты в&nbsp;SKY-кошельке
+		+e.btn-wrap
+			.row
+				.col-md-7
+					+e.btn.btn-warning.btn-block(href="#") Зарегистрироваться
+	+sAdvantages7
+	+sWorkingPrinciple7
+	+sAbout7
+	 
+	+sUsers
+	+footer()

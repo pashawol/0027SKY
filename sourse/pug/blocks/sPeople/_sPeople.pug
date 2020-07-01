@@ -1,0 +1,23 @@
+mixin sPeople()
+	// start sPeople
+	+b.SECTION.sPeople.section#sPeople&attributes(attributes)
+		.container 
+				
+			.row
+				.col-lg.align-self-center
+					h2 10&nbsp;000 участников <br> в&nbsp;SKY-сообществе
+					p Сервис SKY PAY позволяет интернет-магазинам принимать оплату в&nbsp;биткоинах и&nbsp;эфириуме. Все предельно просто: покупатель выбирает удобный способ оплаты и&nbsp;переводит деньги продавцу, которые перечисляет биткоины на&nbsp;кошелек интернет-магазина.
+				mixin item(i,t,a)
+					+e.col.col-md-auto
+						+e.item(href="#")
+							div
+								img(src=`img/png/2/chat-${i}.png`, alt="")
+							+e.DIV.title!= t
+							+e.DIV.link= a
+							+e.DIV.btn
+								+e.DIV.icon-wrap
+									+icon('telegram')
+								| Присоединиться
+				+item("1","SKY КриптоЧат","@SkyChatRu")
+				+item("2",`SKY Banker | <br> КриптоНовости`,"@Sky_Banker")
+	// end sPeople

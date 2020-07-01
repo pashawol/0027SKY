@@ -7,6 +7,12 @@
 			margin-right: auto;
 			max-width: rem(1000);
 		}
+		&--phone{
+			.section-title{
+				max-width: rem(800);
+
+			}
+		}
 		&__col{
 
 			margin-bottom: rem(20px);
@@ -33,6 +39,7 @@
 					box-shadow: none !important;
 					min-height: 1px !important;
 					margin-bottom: rem(20);
+					background: none;
 				 
 				}
 		}
@@ -134,9 +141,24 @@
 			@extend .btn;
 			&.btn-warning{
 				max-width: rem(240);
-					padding: rem(12) rem(15);
+				padding: rem(12) rem(15);
 			}
-			&:not(.btn-warning){
+			&.btn-primary{
+				.icon{
+					font-size: rem(40);
+					margin-right: rem(3);
+				}
+				
+				max-width: rem(260);
+				padding-right: rem(20);
+			 
+					height: rem(60);
+					padding-top: rem(2);
+					padding-bottom: rem(2);
+					display: flex;
+					align-items: center; 
+			}
+			&:not(.btn-warning):not(.btn-primary) {
 
 				@extend .btn-outline;
 			}

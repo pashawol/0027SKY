@@ -22,3 +22,33 @@ mixin sWork()
 				+item("sWork-2","bitcoin.svg",'Bitcoin Bot')
 				+item("sWork-3","eth.svg",'Ethereum Bot')
 	// end sWork
+
+
+mixin sWork8()
+	// start sWork
+	+b.SECTION.sWork.section#sWork&attributes(attributes)
+		.container
+		 
+			+e.row.row
+				mixin item(img,i,t)
+					+e.col.col-sm-auto&attributes(attributes)
+						+e.img-wrap
+							+pic(img+'.png','','',0)
+							//- +pic(img+'-mega.png','','',0)
+							//- img(src=`img/png/1/${img}-mega.png`, alt="")
+							//- img(src=`img/png/2/${img}-mega.png`, alt="")
+							
+					 
+						+e.label(href='#')
+							img(src=`img/svg/${i}`, alt="")
+							= t
+				//- +item("sWork-1","screen.svg",'Web версия')
+				.col-md.order-md-last
+					+e.caption.text-md-left
+						h2 Блок для СЕО текстов SKY&nbsp;CRYPTO
+						p Сервис SKY PAY позволяет интернет-магазинам принимать оплату в биткоинах и эфириуме. Все предельно просто: покупатель выбирает удобный способ оплаты и переводит деньги продавцу, которые перечисляет биткоины на кошелек интернет-магазина. 
+
+						p Подключайте SKY PAY и принимайте оплату в криптовалюте. Мы позаботимся о том, чтобы вам было комфортно и выгодно.
+				+item("sWork-2","bitcoin.svg",'Bitcoin Bot')
+				+item("sWork-3","eth.svg",'Ethereum Bot')
+	// end sWork

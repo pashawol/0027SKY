@@ -421,6 +421,73 @@
 				a{
 					text-decoration: none !important;
 				}
+	&__label{
+		@extend .h5;
+		color: $warning;
+		margin-bottom: rem(30);
+		line-height: (33 / 26);
+			@include media-breakpoint-up(sm) {
+				text-align: left;
+			}
+			text-align: center;
+	}
+
+	&--for{
+			@media (min-width: 1440px) {
+				picture {
+
+					left: 0 !important;
+				}
+			}
+		@include media-breakpoint-up(lg) {
+			.headerBlock__content{
+				max-width: rem(544);
+			}
+		}
+		@include media-breakpoint-up(xl) {
+		picture{
+			transform: none !important;
+			top: 0 !important;
+		}
+		img{
+
+				max-width:none  !important;
+			}
+		}
+
+	}
+	picture {
+		img{
+
+			max-height: 70vh;
+		 
+		}
+	}
+	&--for-phone{
+	
+		@include media-breakpoint-up(xl) {
+			picture {
+				left: rem(100) !important;
+				margin-top: 2vh;
+			}
+		}
+		@include media-breakpoint-up(lg) {
+			picture {
+				left: rem(50) !important;
+			}
+
+			img {
+
+				max-width: none !important;
+			}
+		}
+	}
+	&__btn{
+		.icon{
+
+			font-size: rem(40);
+		}
+	}
 	@include media-breakpoint-up(lg) {}
 
 	@include media-breakpoint-up(md) {}

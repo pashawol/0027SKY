@@ -1,0 +1,44 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug 
+include ../blocks/sAdvantages/_sAdvantages.pug 
+include ../blocks/sWork/_sWork.pug 
+include ../blocks/sAbout/_sAbout.pug 
+include ../blocks/sBlog/_sBlog.pug 
+include ../blocks/sUsers/_sUsers.pug 
+include ../blocks/sWorkingPrinciple/_sWorkingPrinciple.pug 
+include ../blocks/sPromo/_sPromo.pug 
+include ../blocks/sPeople/_sPeople.pug 
+include ../blocks/sSeo/_sSeo.pug 
+
+block variables
+	- let  mainPage= 'page-main'
+block title
+	- let  title= ' 8. For Phone'
+	title= title
+block pagecontent 
+	//- +mob-mnu()
+	+header()
+		+top-nav()
+	//- 	+topLine()
+	+headerBlock2()(class="headerBlock--for headerBlock--for-phone")
+		h1 SKY-бот <br> в&nbsp;мессенджере Telegram
+		+e.label С&nbsp;быстрым доступом из&nbsp;любой точки мира
+		+pic('head-phone.png')
+		//- picture
+		//- img(src="img/png/2/head-phone.png", alt="")
+		p Совершайте переводы, торгуйте, храните и&nbsp;обменивайте Bitcoin и&nbsp;другие криптовалюты в&nbsp;SKY-кошельке
+		+e.btn-wrap
+			.row
+				.col-md-7
+					+e.btn.btn-primary.btn-block(href="#") 
+						+icon("telegram") 
+						| Перейти в SKY-бот
+	+sAdvantages8
+	+sAbout8
+	+sPeople
+	+sWork8
+	+sUsers
+	+footer()

@@ -1,0 +1,118 @@
+
+	// start .sPeople
+	.sPeople {
+		background-image: url(../img/svg/map.svg);
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		h2{
+			max-width: rem(500);
+			@include media-breakpoint-up(md) {
+
+				margin-bottom: rem(35);
+			}
+			margin-bottom: rem(20);
+		}
+		&__col{
+			margin-bottom: 15px;
+		}
+		&__item{
+				@include media-breakpoint-up(md) {
+
+					width: rem(262);
+				}
+				width: 280px;
+			margin-left: auto;
+			margin-right: auto;
+			min-height: 100%;
+			max-height: 348px;
+			background: #FFFFFF;
+			box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.15);
+			border-radius: 15px;
+		 text-align: center;
+		 display: flex;
+		 flex-direction: column;
+		 padding: rem(30) rem(30);
+		 text-decoration: none !important;
+		 img{
+			 flex:  0 0 auto;
+			 margin-bottom: rem(14);
+		 }
+		}
+		&__btn{
+			margin-top: auto;
+		}
+		&__title{
+			@extend .h5;
+			color: #000000;
+			line-height: (33 / 26);
+			margin-bottom: rem(5);
+		}
+		 &__btn{
+			 @extend .btn;
+			 padding: rem(15);
+			 display: flex;
+			 justify-content: center;
+			 align-items: center;
+			  background: #F3F6FA;
+			  border: 1px solid #F3F6FA;
+				border-radius: 5px;
+				font-size: 1rem;
+			  &:hover {
+			  	border-color: darken($color: #F3F6FA, $amount: 2);
+			  	background-color: darken($color: #F3F6FA, $amount: 2);
+			  }
+		 }
+		 &__link{
+			 padding-bottom: rem(20);
+		 }
+		 &__icon-wrap{
+			 border-radius: rem(30);
+			 width: rem(30);
+			 height: rem(30);
+			 background-color: $primary;
+			 display: flex;
+			 justify-content: center;
+			 align-items: center;
+			 margin-right: rem(10);
+			
+			 .icon{
+					color: #ffffff;
+				 font-size: rem(30);
+				}
+
+		 }
+		 p{
+			 max-width: rem(540);
+			 	@include media-breakpoint-up(lg) {
+					 margin-bottom: 1rem;
+				 }
+				 margin-bottom: 2rem;
+		 }
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {
+		text-align: center;
+	}
+	@include media-breakpoint-down(xs) {} 
+
+} // end.sPeople

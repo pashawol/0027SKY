@@ -5,3 +5,5 @@
 1. <https://pashawol.github.io/0027SKY/public/04-contact.html>
 1. <https://pashawol.github.io/0027SKY/public/05-video.html>
 1. <https://pashawol.github.io/0027SKY/public/06-referal.html>
+1. <https://pashawol.github.io/0027SKY/public/07-pc.html>
+1. <https://pashawol.github.io/0027SKY/public/08-phone.html>

@@ -65,3 +65,37 @@ mixin sAbout6()
 	// end sAbout
 
 
+
+mixin sAbout7()
+	// start sAbout
+	+b.SECTION.sAbout--ceo.section#sAbout&attributes(attributes)
+		.container 
+			+e.wrap--ceo
+				h2 Блок для СЕО текстов SKY&nbsp;CRYPTO
+				p Сервис SKY PAY позволяет интернет-магазинам принимать оплату в&nbsp;биткоинах и&nbsp;эфириуме. Все предельно просто: покупатель выбирает удобный способ оплаты и&nbsp;переводит деньги продавцу, которые перечисляет биткоины на&nbsp;кошелек интернет-магазина. 
+
+				p Подключайте SKY PAY и&nbsp;принимайте оплату в&nbsp;криптовалюте. Мы&nbsp;позаботимся о&nbsp;том, чтобы вам было комфортно и&nbsp;выгодно.
+				+pic('ceo.png') 
+	// end sAbout
+
+
+
+mixin sAbout8()
+	// start sAbout
+	+b.SECTION.sAbout--phone.section.bg-light#sAbout&attributes(attributes)
+		.container 
+			+e.wrap--phone
+				h2 SKY-платформа и&nbsp;SKY-бот
+				p SKY BANKER и&nbsp;SKY CRYPTO связаны друг с&nbsp;другом, зарегистрировавшись в&nbsp;SKY-боте, вы&nbsp;также можете пользоваться платформой SKY CRYPTO с&nbsp;компьютера авторизовываясь через Telegram.
+				+pic('about-8.png') 
+				+e.btn-wrap.row
+					.col-sm-6
+						+e.btn.btn-warning(href="#") Зарегистрироваться
+					.col-sm-6
+						+e.btn.btn-primary(href="#") 
+							+icon("telegram")
+							| Перейти в SKY-бот
+	// end sAbout
+
+
+
