@@ -218,13 +218,13 @@
 					}
 				}
 			&:nth-child(even){
-						@include media-breakpoint-down(md){
+						@include media-breakpoint-down(sm){
 							h2{
 								margin-bottom: 0;
 								padding-bottom: 0;
 							}
 						}
-						@include media-breakpoint-up(lg){
+						@include media-breakpoint-up(md){
 
 							margin-right: 0 ;
 							margin-left: auto;
@@ -242,7 +242,7 @@
 
 						margin-right: rem(100);
 					}
-					@include media-breakpoint-up(lg) {
+					@include media-breakpoint-up(md) {
 						margin-top: rem(50);
 						margin-right: rem(50);
 
@@ -262,18 +262,27 @@
 			}
 			
 		}
+		img{
+			will-change: transform;
+		}
+		&__wrap--ceo-pc{
+			@media (min-width: 1440px){
+				max-height: none;
 
-		&__wrap--ceo{
+			}
 				@include media-breakpoint-up(xl) {
 					img{
 
 						margin-left: rem(100);
+						max-width: none;
 					}
 				}
 			@include media-breakpoint-up(md) {
 				img{
 					left: 100%;
-					top: 0;
+					top: 1rem;
+					max-height: 100%;
+					max-width: 800px;
 					// position: static;
 
 				}
@@ -305,8 +314,8 @@
 			}
 			
 			@include media-breakpoint-up(md) {
-			margin-top: rem(60);
-			margin-bottom: rem(60);
+			margin-top: rem(30);
+			margin-bottom: rem(150);
 			}
 
 			img{

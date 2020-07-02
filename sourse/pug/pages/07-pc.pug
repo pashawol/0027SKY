@@ -14,21 +14,21 @@ include ../blocks/sPromo/_sPromo.pug
 block variables
 	- let  mainPage= 'page-main'
 block title
-	- let  title= '7. For PC'
+	- let  title= 'Для ПК'
 	title= title
 block pagecontent 
 	//- +mob-mnu()
 	+header()
 		+top-nav()
 	//- 	+topLine()
-	+headerBlock2()(class="headerBlock--for")
+	+headerBlock2()(class="")
 		h1 SKY-платформа для&nbsp;ПК
 		+e.label С&nbsp;расширенными возможностями
 		+pic('head-pc.png')
 		p Совершайте переводы, торгуйте, храните и&nbsp;обменивайте Bitcoin и&nbsp;другие криптовалюты в&nbsp;SKY-кошельке
 		+e.btn-wrap
 			.row
-				.col-md-7
+				.col-lg-7
 					+e.btn.btn-warning.btn-block(href="#") Зарегистрироваться
 	+sAdvantages7
 	+sWorkingPrinciple7

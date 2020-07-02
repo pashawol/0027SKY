@@ -426,7 +426,7 @@
 		color: $warning;
 		margin-bottom: rem(30);
 		line-height: (33 / 26);
-			@include media-breakpoint-up(sm) {
+			@include media-breakpoint-up(lg) {
 				text-align: left;
 			}
 			text-align: center;
