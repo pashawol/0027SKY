@@ -334,7 +334,7 @@
 				margin-right: 0 !important;
 			}
 					.chosen-single {
-						border: 1px solid #3C4C62;
+						border: 1px solid #E5E5E5;
 					}
 					.option-text{
 						display: none !important;
@@ -399,6 +399,17 @@
 				border: 1px solid #3C4C62;
 			}
 		}
+			&--lang {
+		 
+				@include media-breakpoint-down(sm) {
+				 
+					.chosen-single {
+							border: 1px solid #3C4C62;
+					}
+ 
+				}
+ 
+			}
 	}
 } 
 
