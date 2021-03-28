@@ -41,13 +41,13 @@ body,
 html {
 	@media (min-width: 1440px) {
 
-		font-size: $em-base;
+		font-size: var(--fz) !important;
 	}
 	@media (min-width: 347px) {
-		font-size: 14px;
+		font-size: 14px !important;
 
 	}
-	font-size: 12px;
+	font-size: 12px !important;
 	@include media-breakpoint-up(sm){
 
 	}
@@ -346,7 +346,7 @@ input::-webkit-inner-spin-button {
 		width: 8px;
 		height: 8px;
 		border-radius: 50%;
-		background-color: $secondary;
+		background-color: #EAEDF1;
 		outline: none !important;
 		@include mt;
 		margin-left: rem(8);
@@ -536,5 +536,24 @@ iframe {
 		margin-right: rem(11);
 			width: rem(18);
 			fill: currentColor ;
+	}
+}
+
+.page-head{
+	h1{
+		text-align: center;
+		font-weight: bold;
+		@include rfs(52px);
+		@include media-breakpoint-down(sm) {
+				// font-size: 24px;
+		}
+		margin-bottom: rem(20);
+	}
+	&__row{
+		justify-content: center;
+	}
+	.icon{
+		font-size: rem(20);
+		margin-inline-end: rem(10);
 	}
 }

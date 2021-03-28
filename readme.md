@@ -7,3 +7,5 @@
 1. <https://pashawol.github.io/0027SKY/public/06-referal.html>
 1. <https://pashawol.github.io/0027SKY/public/07-pc.html>
 1. <https://pashawol.github.io/0027SKY/public/08-phone.html>
+=====================================
+1. <https://pashawol.github.io/0027SKY/public/09-artical.html>

@@ -1,0 +1,35 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug 
+include ../blocks/sAdvantages/_sAdvantages.pug 
+include ../blocks/sWork/_sWork.pug 
+include ../blocks/sAbout/_sAbout.pug 
+include ../blocks/sBlog/_sBlog.pug 
+include ../blocks/sUsers/_sUsers.pug 
+
+block variables
+	- let  mainPage= 'page-inner'
+block title
+	- let  title= '«Россети» рассказали об активизации «черных» майнеров на фоне роста биткоина'
+	title= title
+block pagecontent 
+	//- +mob-mnu()
+	+header()
+		+top-nav()
+	+b.page-head
+		.container 
+			+breadcrumb('Главная','Блог', title)
+			h1= title
+			+e.row.row
+				.col-auto.text-warning.fw-500 Биткоин
+				.col-auto.text-secondary 20 мая 2020
+				.col-auto.text-secondary 
+					+icon("eye").me-1
+					| 435
+	//- 	+topLine()
+	+sContent
+	+sBlog2
+	+sUsers
+	+footer()

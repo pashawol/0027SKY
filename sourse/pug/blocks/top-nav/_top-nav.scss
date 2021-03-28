@@ -1,4 +1,33 @@
+.page-inner{
+	.header {
+		@include media-breakpoint-up(xl) {
+			min-height: rem(90);
+		}
+		@include media-breakpoint-up(md) {
+			min-height: rem(90);
+			margin-bottom: rem(50);
+		}
+		margin-bottom: rem(15);
+		min-height: rem(60);
+		}
+	.top-nav{
+		@include media-breakpoint-up(md){
 
+			padding-top: rem(21.5);
+			padding-bottom: rem(21.5);
+		}
+		padding-top: rem(10);
+		padding-bottom: rem(10);
+			background: #FFFFFF;
+			box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+			position: fixed;
+	}
+}
+body:not(.page-inner).top-nav {
+	&:not(.fixed) a {
+		color: #ffffff;
+	}
+}
 .top-nav { 
 	position: absolute;
 	// @include clearfix;ss
@@ -19,9 +48,7 @@
 	padding-top: rem(25);
 	padding-bottom: rem(25);
 	
-	&:not(.fixed) a {
-		color: #ffffff;
-	}
+
 	ul{
 		a{
 			color: $body-color;

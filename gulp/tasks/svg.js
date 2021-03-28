@@ -1,12 +1,13 @@
 module.exports = function () {
+    let dest = '../_sprite.scss'
     $.gulp.task('svg', () => {
         return $.gulp.src('./' + $.sourse + '/svg/*.svg')
-            .pipe($.gp.svgmin({
+            .pipe($.svgmin({
                 js2svg: {
                     pretty: true
                 }
             }))
-            .pipe($.gp.cheerio({
+            .pipe($.cheerio({
                 run: function ($) {
                     $('[fill]').removeAttr('fill');
                     $('[stroke]').removeAttr('stroke');
@@ -15,8 +16,8 @@ module.exports = function () {
                 },
                 parserOptions: { xmlMode: true }
             }))
-            .pipe($.gp.replace('&gt;', '>'))
-            .pipe($.gp.svgSprite({
+            .pipe($.replace('&gt;', '>'))
+            .pipe($.svgSprite({
                 shape: {
                     dimension: {         // Set maximum dimensions
                         maxWidth: 500,
@@ -31,8 +32,8 @@ module.exports = function () {
                         sprite: "../sprite.svg",
                         render: {
                             scss: {
-                                dest: '../_sprite.scss',
-                                template: './' + $.sourse + '/sass/templates/_sprite_template.scss'
+                                template: './' + $.sourse + '/sass/templates/_sprite_template.scss',
+                                dest: dest,
                             }
                         }
                     }
@@ -40,6 +41,12 @@ module.exports = function () {
 
             }))
 
-            .pipe($.gulp.dest($.public + '/img/svg'));
+            .pipe($.gulp.dest(`${$.sourse}/sass/`));
+    });
+    $.gulp.task('svgCopy', function () {
+        return  $.gulp.src(`${$.sourse}/sass/sprite.svg`) 
+                .pipe($.plumber())
+                .pipe($.gulp.dest(`${$.public}/img/svg/`))
+          
     });
 };

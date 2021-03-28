@@ -1,4 +1,6 @@
 :root {
+	--fz: #{$em-base};
+
 	@include media-breakpoint-up(md) {
 
 		--sPT: #{rem(80)}; 

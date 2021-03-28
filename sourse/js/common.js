@@ -104,7 +104,7 @@ const JSCCommon = {
 
 function eventHandler() {
 	// полифил для object-fit
-	objectFitImages();
+	// objectFitImages();
 	// Picture element HTML5 shiv
 	document.createElement("picture");
 	// для свг
@@ -187,6 +187,7 @@ function eventHandler() {
 		},
 
 	});
+
 	// modal window
  
 
@@ -194,14 +195,17 @@ function eventHandler() {
 		html_template: '<span class="option-row"><span class="option-img-wrap"><img  class="{class_name}" src="{url}" /></span><span class="option-text">{text}</span></span> ',
 		display_selected_options: false
 	});
-	if (document.querySelector('.canvas-wrap')) {
-		
-		particlesJS.load('particles-js', 'js/particles.json' );
-		particlesJS.load('particles2-js', 'js/particles.json' );
-		particlesJS.load('particles3-js', 'js/particles.json' );
-		particlesJS.load('particles4-js', 'js/particles.json' );
+	let partical = {
+		el1: 'particles-js',
+		el2: 'particles2-js',
+		el3: 'particles3-js', 
+		el4: 'particles4-js',
 	}
-
+	if (partical.el1) particlesJS.load(partical.el1, 'js/particles.json' );
+	if (partical.el2) particlesJS.load(partical.el2, 'js/particles.json' );
+	if (partical.el3) particlesJS.load(partical.el3, 'js/particles.json' );
+	if (partical.el4) particlesJS.load(partical.el4, 'js/particles.json' );
+		 
 
 
 
@@ -262,6 +266,22 @@ function eventHandler() {
 			let vh = window.innerHeight * 0.01;
 			document.documentElement.style.setProperty('--vh', `${vh}px`);
 		});
+
+
+
+	const swiperGal = new Swiper('.gal-slider--js', {
+		// slidesPerView: 5,
+
+		slidesPerView: 1,
+		spaceBetween: 30, 
+		watchOverflow: true,
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+	});
+
 	};
 	if (document.readyState !== 'loading') {
 		eventHandler();

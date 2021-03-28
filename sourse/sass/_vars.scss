@@ -110,7 +110,7 @@ $container-max-widths: (xs: 480px,
   sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1160px,
+  xl: 1180px,
   // xxl: 1340px
 ) !default;
 // Grid columns
@@ -880,15 +880,15 @@ $custom-file-text: (en: "Browse"
 // // Breadcrumbs
 
 // $breadcrumb-padding-y:              .75rem !default;
-// $breadcrumb-padding-x:              1rem !default;
-// $breadcrumb-item-padding-x:         .5rem !default;
+$breadcrumb-padding-x:              0 !default;
+$breadcrumb-item-padding-x:         .5rem !default;
 
-// $breadcrumb-margin-bottom:          1rem !default;
+$breadcrumb-margin-bottom:          rem(0) !default;
 
-// $breadcrumb-bg:                     $gray-200 !default;
+$breadcrumb-bg:                     transparent !default;
 // $breadcrumb-divider-color:          $gray-600 !default;
-// $breadcrumb-active-color:           $gray-600 !default;
-// $breadcrumb-divider:                quote("/") !default;
+$breadcrumb-active-color:           #000 !default;
+$breadcrumb-divider: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath d='M3.04943 0.191807L2.65362 0.584883C2.53001 0.708591 2.46191 0.873178 2.46191 1.04908C2.46191 1.22489 2.53001 1.38967 2.65362 1.51338L7.13775 5.99732L2.64864 10.4864C2.52503 10.6099 2.45703 10.7747 2.45703 10.9505C2.45703 11.1263 2.52503 11.2912 2.64864 11.4148L3.04201 11.808C3.29782 12.064 3.71451 12.064 3.97031 11.808L9.33436 6.46317C9.45787 6.33966 9.54489 6.17507 9.54489 5.99771L9.54489 5.99566C9.54489 5.81975 9.45777 5.65517 9.33436 5.53165L3.98485 0.191807C3.86133 0.068098 3.69177 0.000194496 3.51597 -4.62875e-08C3.34006 -3.85985e-08 3.17284 0.068098 3.04943 0.191807Z' fill='%230098DB'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0'%3E%3Crect width='12' height='12' fill='white' transform='translate(0 12) rotate(-90)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A") !default;
 
 // // $breadcrumb-border-radius:          $border-radius !default;
 

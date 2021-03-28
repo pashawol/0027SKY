@@ -1,4 +1,3 @@
-// создание блока набрать node block name
 'use strict';
 
 const fs = require('fs')
@@ -15,7 +14,7 @@ const BLOCKS_DIR = path.join(__dirname, 'sourse/pug/blocks');
 
 // default content for files in new block
 const fileSources = {
-	pug: `mixin {blockName}()
+	pug: `mixin {blockName}(data)
 	// start {blockName}
 	+b.SECTION.{blockName}.section#{blockName}&attributes(attributes)
 		.container
@@ -24,49 +23,34 @@ const fileSources = {
 				
 			.row
 	// end {blockName}`,
-	scss: `
-	// start .{blockName}
-	.{blockName} \{
-		 
+	scss: `// start .{blockName}
+.{blockName} \{
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
 	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-up(xs) {}
-	
-	//
-	@include media-breakpoint-between(md, xl) { }
-	
-	
-	//
-	@include media-breakpoint-only(xs) {}
-	@include media-breakpoint-only(sm) {}
-	@include media-breakpoint-only(md) {}
-	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-between(md, xl) {}
 	@include media-breakpoint-only(xl) {}
-	
-	//
 	@include media-breakpoint-down(xl) {}
-	@include media-breakpoint-down(lg) {}
-	@include media-breakpoint-down(md) {}
-	@include media-breakpoint-down(sm) {}
-	@include media-breakpoint-down(xs) {} 
-
 } // end.{blockName}`
 	,
-	js: `let {blockName}Vue = new Vue({
-		el: '#{blockName}',
-		data: {
-			imgSRc: 'img/',
-		},
-		methods: { 
-		},
-		 created: function () { 
-		},
-		computed: {
-		
-		},
-	})`
+	// js: `let {blockName}Vue = new Vue({
+	// 	el: '#{blockName}',
+	// 	data: {
+	// 		imgSRc: 'img/',
+	// 	},
+	// 	methods: { 
+	// 	},
+	// 	 created: function () { 
+	// 	},
+	// 	computed: {
+
+	// 	},
+	// })`
 };
 
 function validateBlockName(blockName) {

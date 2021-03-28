@@ -1,30 +1,41 @@
-mixin sBlog()
+mixin item-blog(i,t)
+	+e.item(href="#")
+		+e.DIV.img-wrap.bg-wrap
+			+pic(i,'bg','')(class="picture-bg")
+		+e.DIV.caption
+			+e.DIV.label Биткоин
+			+e.DIV.title= t
+			.row.small.text-secondary
+				.col-auto 20 мая 2020
+				.col-auto
+					+icon("eye")
+					| 435
+mixin sBlogbody(h2="Статьи по теме")
 	// start sBlog
 	+b.SECTION.sBlog.section#sBlog&attributes(attributes)
 		.container
 			+b.section-title.text-md-left.text-center
-				h2 Читайте наш блог
-				
+				h2 Статьи по теме
 			.row
-				mixin item(i,t)
-					+e.item(href="#")
-						+e.DIV.img-wrap.bg-wrap
-							+pic(i,'bg','')(class="picture-bg")
-						+e.DIV.caption
-							+e.DIV.label Биткоин
-							+e.DIV.title= t
-							.row.small.text-secondary
-								.col-auto 20 мая 2020
-								.col-auto
-									+icon("eye")
-									| 435
-				+e.col--lg.col-lg-6
-					+item("blog-1",'Призрак Сатоси: перемещены биткоины из блока, добытого в феврале 2009 года')
-				+e.col--sm.col-lg-6
-					+item("blog-2",'Роберт Кийосаки: «покупайте биткоин, спасите свой капитал»')
-					+item("blog-3",'Игровой токен Atari можно будет купить за LTC')
-					+item("blog-4",'Uniswap запустил вторую версию своего протокола')
-					+e.btn(href="#")
-						| Еще больше статей
-						+icon("arrow-right")
-	// end sBlog
+				block
+mixin sBlog()
+	+sBlogbody(" Читайте наш блог") 
+		+e.col--lg.col-lg-6
+			+item-blog("blog-1",'Призрак Сатоси: перемещены биткоины из блока, добытого в феврале 2009 года')
+		+e.col--sm.col-lg-6
+			+item-blog("blog-2",'Роберт Кийосаки: «покупайте биткоин, спасите свой капитал»')
+			+item-blog("blog-3",'Игровой токен Atari можно будет купить за LTC')
+			+item-blog("blog-4",'Uniswap запустил вторую версию своего протокола')
+			+e.btn(href="#")
+				| Еще больше статей
+				+icon("arrow-right")
+mixin sBlog2()
+	+sBlogbody
+		+e.col--sm.col-lg-6
+			+item-blog("blog-2",'Роберт Кийосаки: «покупайте биткоин, спасите свой капитал»')
+		+e.col--sm.col-lg-6
+			+item-blog("blog-3",'Игровой токен Atari можно будет купить за LTC')
+		+e.col--sm.col-lg-6
+			+item-blog("blog-4",'Uniswap запустил вторую версию своего протокола')
+		+e.col--sm.col-lg-6
+			+item-blog("blog-4",'Uniswap запустил вторую версию своего протокола') 

@@ -9,5 +9,6 @@ module.exports = [
 	'./gulp/tasks/file',
 	'./gulp/tasks/copylibs',
 	// './gulp/tasks/cleanimg',
-	'./gulp/tasks/img-responsive'
+	'./gulp/tasks/img-responsive',
+	// './gulp/tasks/font',
 ];
